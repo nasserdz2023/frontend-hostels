@@ -56,7 +56,7 @@ export function getApiBaseUrl(): string {
     else {
         // PRIORITY 2: Dynamic Auto-Configuration (Professional Fallback)
 
-        const PRODUCTION_DOMAIN = 'djs-bousaada.com';
+        const PRODUCTION_DOMAINS = ['djs68.com', 'djs-bousaada.com'];
         const FALLBACK_API      = 'https://fedora.ddns.net/api/v1';
 
         // True local dev (only pure localhost)
@@ -74,11 +74,17 @@ export function getApiBaseUrl(): string {
         let targetDomain = currentHostname;
         if (targetDomain.startsWith('www.')) targetDomain = targetDomain.substring(4);
 
-        if (targetDomain === PRODUCTION_DOMAIN || targetDomain === `api.${PRODUCTION_DOMAIN}`) {
-            // ✅ Real production domain → api.djs-bousaada.com
+        // Extract root domain for subdomain matching (e.g. employees.djs68.com → djs68.com)
+        const domainParts = targetDomain.split('.');
+        const rootDomain = domainParts.length >= 2 ? domainParts.slice(-2).join('.') : targetDomain;
+
+        const isProductionDomain = PRODUCTION_DOMAINS.includes(rootDomain);
+
+        if (isProductionDomain) {
+            // ✅ Production domain → api.{rootDomain}
             const apiDomain = targetDomain.startsWith('api.')
                 ? targetDomain
-                : `api.${targetDomain}`;
+                : `api.${rootDomain}`;
             apiBaseUrl = `${currentProtocol}//${apiDomain}/api/v1`;
 
         } else if (isDevLocalhost) {
@@ -88,11 +94,10 @@ export function getApiBaseUrl(): string {
 
         } else if (isLanIp) {
             // ✅ LAN access → nginx on same server handles /api proxy
-            //    Use same host, no port (nginx on 80/443)
             apiBaseUrl = `${currentProtocol}//${currentHostname}/api/v1`;
 
         } else if (isTailscaleIp) {
-            // ✅ Tailscale/WireGuard access → nginx on same server handles /api proxy
+            // ✅ Tailscale access → same host, nginx handles /api
             apiBaseUrl = `${currentProtocol}//${currentHostname}/api/v1`;
         } else if (isTailscaleDomain) {
             // ✅ Tailscale Funnel domain (*.ts.net) → same host, nginx handles /api
