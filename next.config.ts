@@ -4,7 +4,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n.ts");
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
   productionBrowserSourceMaps: false,
   poweredByHeader: false,
   images: {
@@ -29,19 +28,6 @@ const nextConfig: NextConfig = {
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "Permissions-Policy", value: "geolocation=(), microphone=(), camera=()" },
         ],
-      },
-    ];
-  },
-  async rewrites() {
-    const apiUrl = process.env.INTERNAL_API_URL || "http://backend:8000";
-    return [
-      {
-        source: "/api/:path*",
-        destination: `${apiUrl}/api/:path*`,
-      },
-      {
-        source: "/storage/:path*",
-        destination: `${apiUrl}/storage/:path*`,
       },
     ];
   },
