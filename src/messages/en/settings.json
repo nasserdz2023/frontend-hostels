@@ -1,0 +1,196 @@
+{
+    "title": "Settings",
+    "subtitle": "System customization and user preferences",
+    "save": "Save Changes",
+    "tabs": {
+        "general": "General",
+        "personal": "Personal Settings",
+        "modules": "Modules",
+        "features": "Features",
+        "system": "System"
+    },
+    "personal": {
+        "title": "Personal Settings",
+        "desc": "Your personal account preferences",
+        "preferences": {
+            "title": "Interface Preferences",
+            "language": "Preferred Language",
+            "language_desc": "Interface language (saved to your account)",
+            "theme": "Theme",
+            "theme_desc": "Preferred theme (light, dark, auto)",
+            "display_name": "Preferred Display Name",
+            "display_name_desc": "Which name to show in the interface"
+        },
+        "notifications": {
+            "title": "Notification Preferences",
+            "email": "Email Notifications",
+            "email_desc": "Receive notifications via email",
+            "push": "Push Notifications",
+            "push_desc": "Receive push notifications in browser"
+        },
+        "integrations": {
+            "title": "Integrations",
+            "gemini_key": "Gemini API Key",
+            "gemini_key_desc": "Used for AI-powered content writing and automatic translation",
+            "gemini_key_help": "Get your free key from",
+            "gemini_key_link": "Google AI Studio",
+            "gemini_placeholder": "Enter your API key"
+        },
+        "security": {
+            "title": "Security",
+            "2fa_status": "Two-Factor Authentication Status",
+            "2fa_enabled": "Enabled",
+            "2fa_disabled": "Disabled",
+            "manage_2fa": "Manage Two-Factor Authentication"
+        }
+    },
+    "general": {
+        "title": "User Preferences",
+        "desc": "Customize appearance, language, and navigation",
+        "appearance": {
+            "label": "Appearance",
+            "desc": "Choose your preferred application theme",
+            "light": "Light",
+            "dark": "Dark",
+            "system": "System"
+        },
+        "theme": {
+            "label": "Theme Color",
+            "desc": "Choose the main system color",
+            "colors": {
+                "zinc": "Default",
+                "blue": "Blue",
+                "green": "Green",
+                "orange": "Orange",
+                "red": "Red",
+                "rose": "Rose",
+                "pink": "Pink",
+                "violet": "Violet",
+                "indigo": "Indigo",
+                "cyan": "Cyan",
+                "teal": "Teal",
+                "amber": "Amber"
+            }
+        },
+        "language": {
+            "label": "Language",
+            "desc": "Application interface language"
+        },
+        "navigation": {
+            "label": "Navigation Mode",
+            "desc": "Choose how you prefer to navigate between apps",
+            "modes": {
+                "classic": {
+                    "title": "Classic Menu",
+                    "desc": "Fixed sidebar navigation"
+                },
+                "grid": {
+                    "title": "App Grid",
+                    "desc": "Full-screen app launcher"
+                },
+                "dock": {
+                    "title": "Floating Dock",
+                    "desc": "Floating bottom dock menu"
+                },
+                "minimal": {
+                    "title": "Quick Search",
+                    "desc": "No menus (Ctrl+K)"
+                }
+            }
+        }
+    },
+    "modules": {
+        "title": "Module Management",
+        "desc": "Enable or disable core system modules (requires save to apply)",
+        "hr": "Human Resources",
+        "employees": "Employees",
+        "institutions": "Institutions",
+        "municipalities": "Municipalities",
+        "documents": "Documents",
+        "cms": "Content Management",
+        "activities": "Activities",
+        "inventory": "Inventory",
+        "notifications": "Notifications",
+        "audit": "System Logs",
+        "chat": "Messaging",
+        "correspondence": "Correspondence",
+        "associations": "Associations & Clubs",
+        "sports_facilities": "Sports Facilities",
+        "talents": "Talents & Innovation",
+        "projects": "Projects",
+        "shared_files": "Shared Files",
+        "reception": "Reception",
+        "media_office": "Media Office",
+        "legal_encyclopedia": "Legal Encyclopedia",
+        "mail": "Internal Mail",
+        "tasks": "Tasks",
+        "document_requests": "Document Requests",
+        "contact_messages": "Contact Messages",
+        "users": "Users",
+        "roles": "Roles & Permissions",
+        "statistics": "Statistics",
+        "backups": "Backups",
+        "dashboard": "Dashboard"
+    },
+    "features": {
+        "title": "System Features",
+        "desc": "Security and maintenance settings",
+        "virus_scan": "Virus Scan (ClamAV)",
+        "maintenance_mode": "Maintenance Mode",
+        "maintenance_password": "Maintenance Bypass Password",
+        "maintenance_password_placeholder": "Enter a secret password...",
+        "maintenance_password_help": "This password allows access to the site during maintenance via the link: ?secret=PASSWORD"
+    },
+    "system": {
+        "title": "Advanced System Settings",
+        "desc": "Access control, logging, and service URLs",
+        "access_logging": "Access & Logging",
+        "auth": {
+            "login": "Login",
+            "login_desc": "Allow users to log in to the system",
+            "registration": "Registration",
+            "registration_desc": "Allow creation of new accounts",
+            "start_date": "Registration Open Date",
+            "end_date": "Registration Close Date",
+            "start_hint": "Leave empty to open immediately",
+            "end_hint": "Leave empty to keep open indefinitely"
+        },
+        "logging": {
+            "debug": "Debug Logging",
+            "debug_desc": "Enable detailed event logging (Debug Mode)"
+        },
+        "services": {
+            "title": "Service URLs",
+            "api": "API URL",
+            "minio": "MinIO URL",
+            "clamav": "ClamAV Host"
+        }
+    },
+    "messages": {
+        "load_error": "Failed to load settings",
+        "save_success": "Settings saved successfully",
+        "save_error": "Failed to save settings"
+    },
+    "notifications": {
+        "title": "Channel Settings",
+        "description": "Configure notification sending channels",
+        "email": {
+            "title": "Email Settings (SMTP)",
+            "host": "Host",
+            "port": "Port",
+            "username": "Username",
+            "password": "Password",
+            "from_email": "From Email",
+            "from_name": "From Name",
+            "enable_ssl": "Enable SSL/TLS"
+        },
+        "telegram": {
+            "title": "Telegram Settings",
+            "bot_token": "Bot Token",
+            "bot_token_desc": "Bot authentication token from BotFather"
+        }
+    },
+    "common": {
+        "configure": "Configure"
+    }
+}

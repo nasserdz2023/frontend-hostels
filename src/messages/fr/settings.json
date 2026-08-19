@@ -1,0 +1,196 @@
+{
+    "title": "Paramètres",
+    "subtitle": "Personnalisation du système et préférences utilisateur",
+    "save": "Enregistrer les modifications",
+    "tabs": {
+        "general": "Général",
+        "personal": "Paramètres personnels",
+        "modules": "Modules",
+        "features": "Fonctionnalités",
+        "system": "Système"
+    },
+    "personal": {
+        "title": "Paramètres personnels",
+        "desc": "Préférences de votre compte personnel",
+        "preferences": {
+            "title": "Préférences d'interface",
+            "language": "Langue préférée",
+            "language_desc": "Langue de l'interface (enregistrée dans votre compte)",
+            "theme": "Thème",
+            "theme_desc": "Thème préféré (clair, sombre, automatique)",
+            "display_name": "Nom d'affichage préféré",
+            "display_name_desc": "Quel nom afficher dans l'interface"
+        },
+        "notifications": {
+            "title": "Préférences de notifications",
+            "email": "Notifications par email",
+            "email_desc": "Recevoir des notifications par email",
+            "push": "Notifications push",
+            "push_desc": "Recevoir des notifications push dans le navigateur"
+        },
+        "integrations": {
+            "title": "Intégrations",
+            "gemini_key": "Clé API Gemini",
+            "gemini_key_desc": "Utilisé pour la rédaction de contenu et la traduction automatique par IA",
+            "gemini_key_help": "Obtenez votre clé gratuitement sur",
+            "gemini_key_link": "Google AI Studio",
+            "gemini_placeholder": "Entrez votre clé API"
+        },
+        "security": {
+            "title": "Sécurité",
+            "2fa_status": "Statut de l'authentification à deux facteurs",
+            "2fa_enabled": "Activée",
+            "2fa_disabled": "Désactivée",
+            "manage_2fa": "Gérer l'authentification à deux facteurs"
+        }
+    },
+    "general": {
+        "title": "Préférences utilisateur",
+        "desc": "Personnaliser l'apparence, la langue et la navigation",
+        "appearance": {
+            "label": "Apparence",
+            "desc": "Choisissez votre thème d'application préféré",
+            "light": "Clair",
+            "dark": "Sombre",
+            "system": "Système"
+        },
+        "theme": {
+            "label": "Couleur du thème",
+            "desc": "Choisissez la couleur principale du système",
+            "colors": {
+                "zinc": "Défaut",
+                "blue": "Bleu",
+                "green": "Vert",
+                "orange": "Orange",
+                "red": "Rouge",
+                "rose": "Rose",
+                "pink": "Rose vif",
+                "violet": "Violet",
+                "indigo": "Indigo",
+                "cyan": "Cyan",
+                "teal": "Sarcelle",
+                "amber": "Ambre"
+            }
+        },
+        "language": {
+            "label": "Langue",
+            "desc": "Langue de l'interface de l'application"
+        },
+        "navigation": {
+            "label": "Mode de navigation",
+            "desc": "Choisissez comment vous préférez naviguer entre les applications",
+            "modes": {
+                "classic": {
+                    "title": "Menu Classique",
+                    "desc": "Navigation latérale fixe"
+                },
+                "grid": {
+                    "title": "Grille d'applications",
+                    "desc": "Lanceur d'applications plein écran"
+                },
+                "dock": {
+                    "title": "Dock Flottant",
+                    "desc": "Menu dock inférieur flottant"
+                },
+                "minimal": {
+                    "title": "Recherche Rapide",
+                    "desc": "Sans menus (Ctrl+K)"
+                }
+            }
+        }
+    },
+    "modules": {
+        "title": "Gestion des modules",
+        "desc": "Activer ou désactiver les modules principaux (nécessite l'enregistrement)",
+        "hr": "Ressources Humaines",
+        "employees": "Employés",
+        "institutions": "Institutions",
+        "municipalities": "Communes",
+        "documents": "Documents",
+        "cms": "Gestion de Contenu",
+        "activities": "Activités",
+        "inventory": "Inventaire",
+        "notifications": "Notifications",
+        "audit": "Journaux Système",
+        "chat": "Messagerie",
+        "correspondence": "Correspondance",
+        "associations": "Associations et Clubs",
+        "sports_facilities": "Installations sportives",
+        "talents": "Talents et Innovation",
+        "projects": "Projets",
+        "shared_files": "Fichiers partagés",
+        "reception": "Accueil",
+        "media_office": "Bureau des médias",
+        "legal_encyclopedia": "Encyclopédie juridique",
+        "mail": "Courrier interne",
+        "tasks": "Tâches",
+        "document_requests": "Demandes de documents",
+        "contact_messages": "Messages de contact",
+        "users": "Utilisateurs",
+        "roles": "Rôles et permissions",
+        "statistics": "Statistiques",
+        "backups": "Sauvegardes",
+        "dashboard": "Tableau de bord"
+    },
+    "features": {
+        "title": "Fonctionnalités système",
+        "desc": "Paramètres de sécurité et de maintenance",
+        "virus_scan": "Analyse antivirus (ClamAV)",
+        "maintenance_mode": "Mode Maintenance",
+        "maintenance_password": "Mot de passe de contournement",
+        "maintenance_password_placeholder": "Entrez un mot de passe secret...",
+        "maintenance_password_help": "Ce mot de passe permet d'accéder au site pendant la maintenance via le lien : ?secret=PASSWORD"
+    },
+    "system": {
+        "title": "Paramètres système avancés",
+        "desc": "Contrôle d'accès, journalisation et URL de service",
+        "access_logging": "Accès et journaux",
+        "auth": {
+            "login": "Connexion",
+            "login_desc": "Autoriser les utilisateurs à se connecter",
+            "registration": "Inscription",
+            "registration_desc": "Autoriser la création de nouveaux comptes",
+            "start_date": "Date d'ouverture des inscriptions",
+            "end_date": "Date de fermeture des inscriptions",
+            "start_hint": "Laisser vide pour ouvrir immédiatement",
+            "end_hint": "Laisser vide pour garder ouvert indéfiniment"
+        },
+        "logging": {
+            "debug": "Journalisation de débogage",
+            "debug_desc": "Activer la journalisation détaillée des événements (Mode Debug)"
+        },
+        "services": {
+            "title": "URL des services",
+            "api": "URL de l'API",
+            "minio": "URL MinIO",
+            "clamav": "Hôte ClamAV"
+        }
+    },
+    "messages": {
+        "load_error": "Échec du chargement des paramètres",
+        "save_success": "Paramètres enregistrés avec succès",
+        "save_error": "Échec de l'enregistrement des paramètres"
+    },
+    "notifications": {
+        "title": "Paramètres des canaux",
+        "description": "Configuration des canaux d'envoi de notifications",
+        "email": {
+            "title": "Paramètres email (SMTP)",
+            "host": "Serveur (Host)",
+            "port": "Port",
+            "username": "Nom d'utilisateur",
+            "password": "Mot de passe",
+            "from_email": "Email expéditeur",
+            "from_name": "Nom de l'expéditeur",
+            "enable_ssl": "Activer SSL/TLS"
+        },
+        "telegram": {
+            "title": "Paramètres Telegram",
+            "bot_token": "Token du bot",
+            "bot_token_desc": "Token d'authentification du bot depuis BotFather"
+        }
+    },
+    "common": {
+        "configure": "Configurer"
+    }
+}

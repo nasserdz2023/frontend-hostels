@@ -1,0 +1,74 @@
+{
+    "title": "إدارة المكاتب",
+    "subtitle": "إضافة وتعديل وحذف المكاتب التابعة للمصالح",
+    "form": {
+        "name": "اسم المكتب",
+        "nameAr": "الاسم بالعربية",
+        "nameFr": "الاسم بالفرنسية",
+        "nameEn": "الاسم بالإنجليزية",
+        "code": "الرمز",
+        "department": "المصلحة التابعة",
+        "displayOrder": "ترتيب العرض",
+        "address": "العنوان",
+        "phone": "الهاتف",
+        "email": "البريد الإلكتروني",
+        "manager": "المدير",
+        "capacity": "السعة",
+        "floor": "الطابق",
+        "building": "المبنى",
+        "status": "الحالة",
+        "codePlaceholder": "مثال: IT_OFFICE",
+        "nameArPlaceholder": "مثال: مكتب الرقمنة",
+        "nameFrPlaceholder": "Bureau de Numérisation",
+        "nameEnPlaceholder": "Digitization Office",
+        "selectDepartment": "اختر المصلحة"
+    },
+    "table": {
+        "columns": {
+            "code": "الرمز",
+            "name": "المكتب",
+            "department": "المصلحة التابعة",
+            "address": "العنوان",
+            "manager": "المدير",
+            "phone": "الهاتف",
+            "capacity": "السعة",
+            "status": "الحالة",
+            "actions": "الإجراءات"
+        }
+    },
+    "status": {
+        "active": "نشط",
+        "inactive": "غير نشط",
+        "maintenance": "صيانة",
+        "full": "كامل"
+    },
+    "alerts": {
+        "noOffices": "لا توجد مكاتب",
+        "loadError": "فشل في تحميل المكاتب",
+        "saveSuccess": "تم حفظ المكتب بنجاح",
+        "updateSuccess": "تم تحديث المكتب بنجاح",
+        "createSuccess": "تم إنشاء المكتب بنجاح",
+        "deleteSuccess": "تم حذف المكتب بنجاح",
+        "deleteConfirm": "هل أنت متأكد من حذف هذا المكتب؟",
+        "requiredFields": "الرمز، الاسم بالعربية، والمصلحة حقول مطلوبة",
+        "genericError": "حدث خطأ",
+        "addNew": "إضافة مكتب",
+        "edit": "تعديل",
+        "delete": "حذف"
+    },
+    "details": {
+        "informations": "المعلومات",
+        "employees": "الموظفون",
+        "equipment": "المعدات"
+    },
+    "dialog": {
+        "edit": "تعديل مكتب",
+        "add": "إضافة مكتب جديد"
+    },
+    "buttons": {
+        "cancel": "إلغاء",
+        "saving": "جاري الحفظ...",
+        "saveEdit": "حفظ التعديلات",
+        "add": "إضافة"
+    }
+}

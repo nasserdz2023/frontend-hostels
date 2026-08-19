@@ -1,0 +1,188 @@
+{
+    "title": "Employees",
+    "subtitle": "Manage employees and HR",
+    "totalEmployees": "Total Employees",
+    "activeEmployees": "Active Employees",
+    "onLeave": "On Leave",
+    "documents": "Documents",
+    "actions": {
+        "add": "Add Employee",
+        "edit": "Edit",
+        "view": "View Details",
+        "delete": "Delete",
+        "import": "Import",
+        "export": "Export"
+    },
+    "tabs": {
+        "all": "All Employees",
+        "active": "Active",
+        "inactive": "Inactive",
+        "requests": "Requests"
+    },
+    "fields": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "firstNameAr": "First Name (Arabic)",
+        "lastNameAr": "Last Name (Arabic)",
+        "firstNameFr": "First Name (French)",
+        "lastNameFr": "Last Name (French)",
+        "nationalId": "National ID",
+        "phone": "Phone Number",
+        "address": "Address",
+        "employeeNumber": "Employee Number (Matricule)",
+        "grade": "Grade",
+        "rank": "Rank",
+        "originalDepartment": "Original Department",
+        "originalAdministration": "Original Administration",
+        "department": "Department",
+        "position": "Position",
+        "institution": "Institution",
+        "hireDate": "Hire Date",
+        "status": "Status",
+        "role": "Role",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "birthDate": "Date of Birth",
+        "birthDateEstimated": "Estimated Birth Date (Year Only)",
+        "birthPlace": "Place of Birth",
+        "birthWilaya": "Birth Wilaya",
+        "birthMunicipality": "Birth Municipality",
+        "gender": "Gender",
+        "maritalStatus": "Marital Status",
+        "mobile": "Mobile Number",
+        "city": "City",
+        "emergencyContactName": "Emergency Contact Name",
+        "emergencyContactPhone": "Emergency Contact Phone",
+        "emergencyContactRelationship": "Relationship",
+        "bankName": "Bank Name",
+        "bankAccount": "Bank Account Number (CCP/Bank)",
+        "ssn": "Social Security Number",
+        "uploadPhoto": "Upload Photo",
+        "changePhoto": "Change Photo",
+        "fatherName": "Father's Name",
+        "motherFullname": "Mother's Full Name",
+        "legalPosition": "Legal Position",
+        "legalPositions": {
+            "ACTIVE": "Active",
+            "SECONDMENT": "Secondment",
+            "AVAILABILITY": "Availability",
+            "DETACHMENT": "Detachment",
+            "MILITARY_SERVICE": "Military Service",
+            "RETIRED": "Retired",
+            "SUSPENDED": "Suspended",
+            "EXEMPTED": "Exempted",
+            "MISE_A_DISPOSITION": "At Disposal",
+            "OUT_OF_FRAME": "Out of Frame"
+        },
+        "documents": "Documents"
+    },
+    "steps": {
+        "personal": "Personal Info",
+        "personalDesc": "Name, date of birth, marital status",
+        "job": "Job Info",
+        "jobDesc": "Grade, position, department, and hire date",
+        "contact": "Contact Info",
+        "contactDesc": "Phone, address, and emergency contact",
+        "bank": "Bank Info",
+        "bankDesc": "Bank account number and social security number",
+        "account": "Account Setup",
+        "accountDesc": "User account settings and access roles"
+    },
+    "departments": {
+        "YOUTH": "Youth Department",
+        "SPORTS": "Sports Department",
+        "INVESTMENT": "Investment Department",
+        "TRAINING": "Training Department"
+    },
+    "sections": {
+        "emergencyContact": "Emergency Contact"
+    },
+    "messages": {
+        "createSuccess": "Employee created successfully",
+        "updateSuccess": "Employee updated successfully",
+        "deleteSuccess": "Employee deleted successfully",
+        "confirmDelete": "Are you sure you want to delete this employee?",
+        "createUserAccount": "Create System Account",
+        "createUserAccountDesc": "Create a user account for this employee to access the system",
+        "loadError": "Failed to load employee data",
+        "updateError": "An error occurred while updating employee data"
+    },
+    "wish_document": "Document",
+    "upload_document": "Upload Document",
+    "upload_wish_document": "Upload Wish Document",
+    "delete_document": "Delete Document",
+    "view_document": "View Document",
+    "document_uploaded": "Document uploaded successfully",
+    "document_deleted": "Document deleted successfully",
+    "no_document": "No document",
+    "file_too_large": "File size must not exceed 10MB",
+    "upload_failed": "Failed to upload document",
+    "delete_failed": "Failed to delete document",
+    "options": {
+        "gender": {
+            "male": "Male",
+            "female": "Female"
+        },
+        "orgAdminType": {
+            "DJS": "Directorate of Youth and Sports (DJS)",
+            "ODEJ": "Office of Youth Establishments (ODEJ)",
+            "OPOW": "Office of the Wilaya Omnisports Park (OPOW)",
+            "OTHER": "Outside Sector"
+        },
+        "relationships": {
+            "father": "Father",
+            "mother": "Mother",
+            "husband": "Husband",
+            "wife": "Wife",
+            "son": "Son",
+            "daughter": "Daughter",
+            "brother": "Brother",
+            "sister": "Sister",
+            "other": "Other"
+        },
+        "maritalStatus": {
+            "single": "Single",
+            "married": "Married",
+            "divorced": "Divorced",
+            "widowed": "Widowed"
+        }
+    },
+    "wishes": {
+        "master_pdf": {
+            "title": "Master Wish PDF",
+            "upload": "Upload Master PDF",
+            "upload_description": "Upload a single PDF containing all wish documents for the current batch",
+            "page_number": "Page Number",
+            "page_number_placeholder": "Enter page number",
+            "extract": "Extract & Upload",
+            "extracting": "Extracting...",
+            "extract_success": "Document extracted and uploaded successfully",
+            "delete": "Delete Master PDF",
+            "delete_confirm": "Are you sure you want to delete the master PDF?",
+            "total_pages": "Total Pages",
+            "uploaded_at": "Upload Date",
+            "no_master_pdf": "No master PDF, please upload a PDF first",
+            "page_number_required": "Please enter a page number",
+            "master_pdf_required": "Please upload a master PDF first"
+        }
+    },
+    "quickCreate": {
+        "title": "Quick Access",
+        "subtitle": "Create a document in one click",
+        "workCertificate": "Work Certificate",
+        "salaryCert": "Salary Certificate",
+        "experienceCert": "Experience Certificate",
+        "serviceCert": "Service Certificate",
+        "clickToCreate": "Click to Create",
+        "creating": "Creating...",
+        "success": "{type} created successfully",
+        "error": "Failed to create {type}",
+        "description": {
+            "workCertificate": "Document proving employee's employment",
+            "salaryCert": "Monthly salary statement",
+            "experienceCert": "Professional experience certificate",
+            "serviceCert": "Service performance certificate"
+        }
+    }
+}

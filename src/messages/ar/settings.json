@@ -1,0 +1,196 @@
+{
+    "title": "الإعدادات",
+    "subtitle": "تخصيص النظام وتفضيلات المستخدم",
+    "save": "حفظ التغييرات",
+    "tabs": {
+        "general": "عام",
+        "personal": "الإعدادات الشخصية",
+        "modules": "الوحدات",
+        "features": "الميزات",
+        "system": "النظام"
+    },
+    "personal": {
+        "title": "الإعدادات الشخصية",
+        "desc": "تفضيلات حسابك الشخصي",
+        "preferences": {
+            "title": "تفضيلات الواجهة",
+            "language": "اللغة المفضلة",
+            "language_desc": "لغة واجهة التطبيق (تُحفظ في حسابك)",
+            "theme": "المظهر",
+            "theme_desc": "المظهر المفضل (فاتح، داكن، تلقائي)",
+            "display_name": "اسم العرض المفضل",
+            "display_name_desc": "أي اسم يظهر في الواجهة"
+        },
+        "notifications": {
+            "title": "تفضيلات الإشعارات",
+            "email": "إشعارات البريد الإلكتروني",
+            "email_desc": "استلام الإشعارات عبر البريد الإلكتروني",
+            "push": "الإشعارات الفورية",
+            "push_desc": "استقبال الإشعارات الفورية في المتصفح"
+        },
+        "integrations": {
+            "title": "التكاملات",
+            "gemini_key": "مفتاح Gemini API",
+            "gemini_key_desc": "يُستخدم لكتابة المحتوى والترجمة الآلية بالذكاء الاصطناعي",
+            "gemini_key_help": "احصل على مفتاحك مجاناً من",
+            "gemini_key_link": "Google AI Studio",
+            "gemini_placeholder": "أدخل مفتاح API الخاص بك"
+        },
+        "security": {
+            "title": "الأمان",
+            "2fa_status": "حالة المصادقة الثنائية",
+            "2fa_enabled": "مفعّلة",
+            "2fa_disabled": "غير مفعّلة",
+            "manage_2fa": "إدارة المصادقة الثنائية"
+        }
+    },
+    "general": {
+        "title": "تفضيلات المستخدم",
+        "desc": "تخصيص المظهر واللغة والتنقل",
+        "appearance": {
+            "label": "المظهر",
+            "desc": "اختر المظهر المفضل للتطبيق",
+            "light": "فاتح",
+            "dark": "داكن",
+            "system": "النظام"
+        },
+        "theme": {
+            "label": "لون النظام",
+            "desc": "اختر اللون الرئيسي للنظام",
+            "colors": {
+                "zinc": "افتراضي",
+                "blue": "أزرق",
+                "green": "أخضر",
+                "orange": "برتقالي",
+                "red": "أحمر",
+                "rose": "وردي",
+                "pink": "زهري",
+                "violet": "بنفسجي",
+                "indigo": "نيلي",
+                "cyan": "سماوي",
+                "teal": "فيروزي",
+                "amber": "كهرماني"
+            }
+        },
+        "language": {
+            "label": "اللغة",
+            "desc": "لغة واجهة التطبيق"
+        },
+        "navigation": {
+            "label": "أسلوب التنقل",
+            "desc": "اختر الطريقة التي تفضلها للتنقل بين التطبيقات",
+            "modes": {
+                "classic": {
+                    "title": "القائمة الكلاسيكية",
+                    "desc": "قائمة جانبية ثابتة"
+                },
+                "grid": {
+                    "title": "شبكة التطبيقات",
+                    "desc": "مشغل تطبيقات ملء الشاشة"
+                },
+                "dock": {
+                    "title": "الرصيف العائم",
+                    "desc": "قائمة سفلية عائمة (Dock)"
+                },
+                "minimal": {
+                    "title": "البحث السريع",
+                    "desc": "بدون قوائم (Ctrl+K)"
+                }
+            }
+        }
+    },
+    "modules": {
+        "title": "إدارة الوحدات",
+        "desc": "تفعيل أو تعطيل وحدات النظام الرئيسية (يتطلب الحفظ للتطبيق)",
+        "hr": "الموارد البشرية",
+        "employees": "الموظفين",
+        "institutions": "المؤسسات",
+        "municipalities": "البلديات",
+        "documents": "الوثائق",
+        "cms": "إدارة المحتوى",
+        "activities": "الأنشطة",
+        "inventory": "المخزون",
+        "notifications": "الإشعارات",
+        "audit": "سجلات النظام",
+        "chat": "المحادثات",
+        "correspondence": "المراسلات",
+        "associations": "الجمعيات والنادي",
+        "sports_facilities": "المنشآت الرياضية",
+        "talents": "المواهب والابتكار",
+        "projects": "المشاريع",
+        "shared_files": "الملفات المشتركة",
+        "reception": "الاستقبال",
+        "media_office": "المكتب الإعلامي",
+        "legal_encyclopedia": "الموسوعة القانونية",
+        "mail": "البريد الداخلي",
+        "tasks": "المهام",
+        "document_requests": "طلبات الوثائق",
+        "contact_messages": "رسائل الاتصال",
+        "users": "المستخدمين",
+        "roles": "الأدوار والصلاحيات",
+        "statistics": "الإحصائيات",
+        "backups": "النسخ الاحتياطي",
+        "dashboard": "لوحة التحكم"
+    },
+    "features": {
+        "title": "ميزات النظام",
+        "desc": "إعدادات الأمان والصيانة",
+        "virus_scan": "فحص الفيروسات (ClamAV)",
+        "maintenance_mode": "وضع الصيانة",
+        "maintenance_password": "كلمة مرور التجاوز (Bypass Password)",
+        "maintenance_password_placeholder": "أدخل كلمة مرور سرية...",
+        "maintenance_password_help": "يمكن استخدام كلمة المرور هذه للدخول للموقع أثناء الصيانة عبر الرابط: ?secret=PASSWORD"
+    },
+    "system": {
+        "title": "إعدادات النظام المتقدمة",
+        "desc": "التحكم في الوصول، السجلات، وعناوين الخدمات",
+        "access_logging": "الوصول والسجلات",
+        "auth": {
+            "login": "تسجيل الدخول (Login)",
+            "login_desc": "سماح للمستخدمين بتسجيل الدخول للنظام",
+            "registration": "تسجيل حساب جديد (Registration)",
+            "registration_desc": "سماح بإنشاء حسابات جديدة",
+            "start_date": "تاريخ فتح التسجيل",
+            "end_date": "تاريخ إغلاق التسجيل",
+            "start_hint": "اتركه فارغاً ليفتح فوراً",
+            "end_hint": "اتركه فارغاً ليبقى مفتوحاً دائماً"
+        },
+        "logging": {
+            "debug": "سجلات التصحيح (Debug Logging)",
+            "debug_desc": "تفعيل تسجيل الأحداث التفصيلي (Debug Mode)"
+        },
+        "services": {
+            "title": "عناوين الخدمات (Service URLs)",
+            "api": "رابط الواجهة البرمجية (API URL)",
+            "minio": "رابط تخزين الملفات (MinIO URL)",
+            "clamav": "مضيف فحص الفيروسات (ClamAV Host)"
+        }
+    },
+    "notifications": {
+        "title": "إعدادات القنوات",
+        "description": "تكوين قنوات إرسال الإشعارات",
+        "email": {
+            "title": "إعدادات البريد الإلكتروني (SMTP)",
+            "host": "الخادم (Host)",
+            "port": "المنفذ (Port)",
+            "username": "اسم المستخدم",
+            "password": "كلمة المرور",
+            "from_email": "البريد المرسل",
+            "from_name": "اسم المرسل",
+            "enable_ssl": "تفعيل SSL/TLS"
+        },
+        "telegram": {
+            "title": "إعدادات تيليجرام (Telegram)",
+            "bot_token": "رمز البوت (Bot Token)",
+            "bot_token_desc": "رمز المصادقة الخاص بالبوت من BotFather"
+        }
+    },
+    "messages": {
+        "load_error": "فشل تحميل الإعدادات",
+        "save_success": "تم حفظ الإعدادات بنجاح",
+        "save_error": "فشل حفظ الإعدادات"
+    },
+    "common": {
+        "configure": "تكوين"
+    }
+}

@@ -1,0 +1,117 @@
+{
+    "title": "Gestion des Compétences",
+    "subtitle": "Classifier et gérer les compétences des employés et l'évaluation des aptitudes",
+    "pageTitle": "Gestion des compétences",
+    "pageSubtitle": "Classifier et gérer les compétences des employés et évaluer leurs aptitudes",
+    "categories": "Catégories",
+    "skills": "Compétences",
+    "addCategory": "Ajouter une catégorie",
+    "editCategory": "Modifier la catégorie",
+    "deleteCategory": "Supprimer la catégorie",
+    "categoryName": "Nom de la catégorie",
+    "categoryNameAr": "Nom en arabe",
+    "categoryNameFr": "Nom en français",
+    "addSkill": "Ajouter une compétence",
+    "editSkill": "Modifier la compétence",
+    "deleteSkill": "Supprimer la compétence",
+    "skillName": "Nom de la compétence",
+    "skillNameAr": "Nom en arabe",
+    "skillNameFr": "Nom en français",
+    "proficiencyLevel": "Niveau de compétence",
+    "yearsOfExperience": "Années d'expérience",
+    "employeeSkills": "Matrice des compétences",
+    "employeeSkillsSubtitle": "Consulter et analyser les compétences des employés par catégorie et niveau",
+    "totalCategories": "Catégories",
+    "totalSkills": "Compétences",
+    "totalEmployeeSkills": "Compétences enregistrées",
+    "proficiencyDistribution": "Distribution des niveaux",
+    "searchEmployee": "Rechercher un employé...",
+    "allCategories": "Toutes les catégories",
+    "noSkills": "Aucune compétence enregistrée",
+    "noCategories": "Aucune catégorie",
+    "employees": "Employés ({count})",
+    "noEmployees": "Aucun employé trouvé",
+    "loading": "Chargement...",
+    "error": "Échec du chargement des données",
+    "years": "ans",
+    "proficiency": {
+        "BEGINNER": "Débutant",
+        "INTERMEDIATE": "Intermédiaire",
+        "ADVANCED": "Avancé",
+        "EXPERT": "Expert"
+,
+    "management": {
+        "title": "Gestion des compétences",
+        "subtitle": "Gérer et classer les compétences des employés",
+        "addNew": "Ajouter une compétence",
+        "edit": "Modifier la compétence",
+        "delete": "Supprimer la compétence",
+        "table": {
+            "name": "Compétence",
+            "category": "Catégorie",
+            "description": "Description",
+            "employeeCount": "Employés",
+            "status": "Statut",
+            "actions": "Actions"
+        },
+        "categories": {
+            "technical": "Technique",
+            "soft": "Comportementale",
+            "management": "Manageriale",
+            "language": "Linguistique",
+            "all": "Toutes"
+        },
+        "status": {
+            "active": "Actif",
+            "inactive": "Inactif"
+        },
+        "alerts": {
+            "noSkills": "Aucune compétence trouvée",
+            "loadError": "Échec du chargement",
+            "saveSuccess": "Enregistré avec succès",
+            "deleteConfirm": "Êtes-vous sûr de vouloir supprimer?"
+        }
+    },
+    "employees": {
+        "title": "Compétences des employés",
+        "subtitle": "Consulter et évaluer les compétences des employés",
+        "assignSkill": "Attribuer une compétence",
+        "table": {
+            "employee": "Employé",
+            "skill": "Compétence",
+            "level": "Niveau",
+            "certified": "Certifié",
+            "evaluatedBy": "Évalué par",
+            "date": "Date",
+            "actions": "Actions"
+        },
+        "levels": {
+            "beginner": "Débutant",
+            "intermediate": "Intermédiaire",
+            "advanced": "Avancé",
+            "expert": "Expert"
+        },
+        "certified": {
+            "yes": "Oui",
+            "no": "Non"
+        },
+        "filters": {
+            "allSkills": "Toutes les compétences",
+            "allLevels": "Tous les niveaux"
+        },
+        "alerts": {
+            "noEmployees": "Aucun employé trouvé",
+            "loadError": "Échec du chargement",
+            "assignSuccess": "Compétence attribuée avec succès"
+        },
+        "form": {
+            "selectEmployee": "Sélectionner l'employé",
+            "selectSkill": "Sélectionner la compétence",
+            "skillLevel": "Niveau de compétence",
+            "certificate": "Certificat",
+            "evaluationDate": "Date d'évaluation",
+            "notes": "Notes"
+        }
+    }
+}
+}

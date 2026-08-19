@@ -1,0 +1,50 @@
+{
+    "title": "Gestion des Bureaux",
+    "subtitle": "Ajouter, modifier et supprimer les bureaux rattachés aux services",
+    "form": {
+        "name": "Nom du bureau",
+        "nameAr": "Nom en arabe",
+        "nameFr": "Nom en français",
+        "code": "Code",
+        "address": "Adresse",
+        "phone": "Téléphone",
+        "email": "Email",
+        "manager": "Responsable",
+        "capacity": "Capacité",
+        "floor": "Étage",
+        "building": "Bâtiment",
+        "status": "Statut"
+    },
+    "table": {
+        "columns": {
+            "code": "Code",
+            "name": "Bureau",
+            "address": "Adresse",
+            "manager": "Responsable",
+            "phone": "Téléphone",
+            "capacity": "Capacité",
+            "status": "Statut",
+            "actions": "Actions"
+        }
+    },
+    "status": {
+        "active": "Actif",
+        "inactive": "Inactif",
+        "maintenance": "Maintenance",
+        "full": "Complet"
+    },
+    "alerts": {
+        "noOffices": "Aucun bureau trouvé",
+        "loadError": "Échec du chargement des bureaux",
+        "saveSuccess": "Bureau enregistré avec succès",
+        "deleteConfirm": "Êtes-vous sûr de vouloir supprimer ce bureau ?",
+        "addNew": "Ajouter un bureau",
+        "edit": "Modifier",
+        "delete": "Supprimer"
+    },
+    "details": {
+        "informations": "Informations",
+        "employees": "Employés",
+        "equipment": "Équipement"
+    }
+}

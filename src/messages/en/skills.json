@@ -1,0 +1,116 @@
+{
+    "title": "Skills & Competencies Management",
+    "subtitle": "Classify and manage employee skills and competency assessments",
+    "pageTitle": "Skills Management",
+    "pageSubtitle": "Classify and manage employee skills and competency assessments",
+    "categories": "Categories",
+    "skills": "Skills",
+    "addCategory": "Add Category",
+    "editCategory": "Edit Category",
+    "deleteCategory": "Delete Category",
+    "categoryName": "Category Name",
+    "categoryNameAr": "Arabic Name",
+    "categoryNameFr": "French Name",
+    "addSkill": "Add Skill",
+    "editSkill": "Edit Skill",
+    "deleteSkill": "Delete Skill",
+    "skillName": "Skill Name",
+    "skillNameAr": "Arabic Name",
+    "skillNameFr": "French Name",
+    "proficiencyLevel": "Proficiency Level",
+    "yearsOfExperience": "Years of Experience",
+    "employeeSkills": "Employee Skills Matrix",
+    "employeeSkillsSubtitle": "View and analyze employee skills by category and level",
+    "totalCategories": "Categories",
+    "totalSkills": "Skills",
+    "totalEmployeeSkills": "Recorded Skills",
+    "proficiencyDistribution": "Level Distribution",
+    "searchEmployee": "Search employee...",
+    "allCategories": "All Categories",
+    "noSkills": "No skills recorded",
+    "noCategories": "No categories",
+    "employees": "Employees ({count})",
+    "noEmployees": "No employees found",
+    "loading": "Loading...",
+    "error": "Failed to load data",
+    "years": "years",
+    "proficiency": {
+        "BEGINNER": "Beginner",
+        "INTERMEDIATE": "Intermediate",
+        "ADVANCED": "Advanced",
+        "EXPERT": "Expert"
+    },
+    "management": {
+        "title": "Skills Management",
+        "subtitle": "Manage and classify employee skills",
+        "addNew": "Add New Skill",
+        "edit": "Edit Skill",
+        "delete": "Delete Skill",
+        "table": {
+            "name": "Skill",
+            "category": "Category",
+            "description": "Description",
+            "employeeCount": "Employees",
+            "status": "Status",
+            "actions": "Actions"
+        },
+        "categories": {
+            "technical": "Technical",
+            "soft": "Soft",
+            "management": "Management",
+            "language": "Language",
+            "all": "All"
+        },
+        "status": {
+            "active": "Active",
+            "inactive": "Inactive"
+        },
+        "alerts": {
+            "noSkills": "No skills found",
+            "loadError": "Failed to load skills",
+            "saveSuccess": "Saved successfully",
+            "deleteConfirm": "Are you sure you want to delete?"
+        }
+    },
+    "employees": {
+        "title": "Employee Skills",
+        "subtitle": "View and evaluate employee skills",
+        "assignSkill": "Assign Skill",
+        "table": {
+            "employee": "Employee",
+            "skill": "Skill",
+            "level": "Level",
+            "certified": "Certified",
+            "evaluatedBy": "Evaluated By",
+            "date": "Date",
+            "actions": "Actions"
+        },
+        "levels": {
+            "beginner": "Beginner",
+            "intermediate": "Intermediate",
+            "advanced": "Advanced",
+            "expert": "Expert"
+        },
+        "certified": {
+            "yes": "Yes",
+            "no": "No"
+        },
+        "filters": {
+            "allSkills": "All Skills",
+            "allLevels": "All Levels"
+        },
+        "alerts": {
+            "noEmployees": "No employees found",
+            "loadError": "Failed to load data",
+            "assignSuccess": "Skill assigned successfully"
+        },
+        "form": {
+            "selectEmployee": "Select Employee",
+            "selectSkill": "Select Skill",
+            "skillLevel": "Skill Level",
+            "certificate": "Certificate",
+            "evaluationDate": "Evaluation Date",
+            "notes": "Notes"
+        }
+}
+}

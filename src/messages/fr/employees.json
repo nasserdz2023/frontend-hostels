@@ -1,0 +1,174 @@
+{
+    "title": "Employés",
+    "subtitle": "Gérez le personnel et les dossiers RH de votre organisation",
+    "totalEmployees": "Total des employés",
+    "activeEmployees": "Employés actifs",
+    "onLeave": "En congé",
+    "documents": "Documents",
+    "sort": {
+        "name": "Nom",
+        "newest": "Plus récents",
+        "oldest": "Plus anciens",
+        "alphabetical": "Alphabétique",
+        "age_desc": "Âge (Le plus ágé)",
+        "age_asc": "Âge (Le plus jeune)",
+        "employee_number": "Matricule",
+        "department": "Département"
+    },
+    "status": {
+        "active": "Actif",
+        "inactive": "Inactif",
+        "archived": "Archivé"
+    },
+    "actions": {
+        "add": "Ajouter un employé",
+        "edit": "Modifier",
+        "view": "Voir les détails",
+        "delete": "Supprimer",
+        "import": "Importer",
+        "export": "Exporter"
+    },
+    "tabs": {
+        "all": "Tout le personnel",
+        "active": "Actif",
+        "inactive": "Inactif",
+        "requests": "Demandes"
+    },
+    "fields": {
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "firstNameAr": "Prénom (Arabe)",
+        "lastNameAr": "Nom (Arabe)",
+        "firstNameFr": "Prénom (Français)",
+        "lastNameFr": "Nom (Français)",
+        "nationalId": "Numéro National",
+        "phone": "Numéro de téléphone",
+        "address": "Adresse",
+        "employeeNumber": "Matricule",
+        "employeeType": {
+            "temporary": "Temporaire",
+            "freelance": "Freelance"
+        },
+        "orgAdminType": {
+            "DJS": "Direction de la Jeunesse et des Sports (DJS)",
+            "ODEJ": "Office des Établissements de Jeunes (ODEJ)",
+            "OPOW": "Office du Parc Omnisports de Wilaya (OPOW)",
+            "OTHER": "Hors secteur"
+        },
+        "relationships": {
+            "father": "Père",
+            "mother": "Mère",
+            "husband": "Mari",
+            "wife": "Femme",
+            "son": "Fils",
+            "daughter": "Fille",
+            "brother": "Frère",
+            "sister": "Sœur",
+            "other": "Autre"
+        },
+        "grade": "Grade",
+        "rank": "Échelon",
+        "originalDepartment": "Service d'origine",
+        "originalAdministration": "Administration d'origine",
+        "department": "Département",
+        "position": "Poste",
+        "institution": "Établissement",
+        "birthDate": "Date de naissance",
+        "birthDateEstimated": "Date de naissance présumée",
+        "birthPlace": "Lieu de naissance",
+        "birthWilaya": "Wilaya de naissance",
+        "birthMunicipality": "Commune de naissance",
+        "gender": "Sexe",
+        "hireDate": "Date d'embauche",
+        "status": "Statut",
+        "role": "Rôle Système",
+        "email": "Email",
+        "password": "Mot de passe",
+        "confirmPassword": "Confirmer le mot de passe",
+        "fatherName": "Nom du père",
+        "motherFullname": "Nom et prénom de la mère",
+        "legalPosition": "Situation légale",
+        "legalPositions": {
+            "ACTIVE": "En activité",
+            "SECONDMENT": "Détachement",
+            "AVAILABILITY": "Disponibilité",
+            "DETACHMENT": "Hors cadre",
+            "MILITARY_SERVICE": "Service militaire",
+            "RETIRED": "Retraité",
+            "SUSPENDED": "Suspendu",
+            "MISE_A_DISPOSITION": "À disposition",
+            "OUT_OF_FRAME": "Hors cadre"
+        },
+        "documents": "Documents"
+    },
+    "steps": {
+        "personal": "Infos Personnelles",
+        "job": "Détails du Poste",
+        "account": "Configuration du Compte",
+        "review": "Révision"
+    },
+    "departments": {
+        "YOUTH": "Service Jeunesse",
+        "SPORTS": "Service Sports",
+        "INVESTMENT": "Service Investissement",
+        "TRAINING": "Service Formation"
+    },
+    "messages": {
+        "createSuccess": "Employé créé avec succès",
+        "updateSuccess": "Employé mis à jour avec succès",
+        "deleteSuccess": "Employé supprimé avec succès",
+        "confirmDelete": "Êtes-vous sûr de vouloir supprimer cet employé ?",
+        "createUserAccount": "Créer un compte système",
+        "createUserAccountDesc": "Générer un compte utilisateur pour que cet employé puisse accéder au système",
+        "loadError": "Échec du chargement des données de l'employé",
+        "updateError": "Une erreur est survenue lors de la mise à jour de l'employé"
+    },
+    "wish_document": "Document",
+    "upload_document": "Télécharger un document",
+    "upload_wish_document": "Télécharger le document de souhait",
+    "delete_document": "Supprimer le document",
+    "view_document": "Voir le document",
+    "document_uploaded": "Document téléchargé avec succès",
+    "document_deleted": "Document supprimé avec succès",
+    "no_document": "Aucun document",
+    "file_too_large": "La taille du fichier ne doit pas dépasser 10 Mo",
+    "upload_failed": "Échec du téléchargement du document",
+    "delete_failed": "Échec de la suppression du document",
+    "wishes": {
+        "master_pdf": {
+            "title": "PDF principal des vœux",
+            "upload": "Télécharger le PDF principal",
+            "upload_description": "Téléchargez un seul PDF contenant tous les documents de vœux pour le lot actuel",
+            "page_number": "Numéro de page",
+            "page_number_placeholder": "Entrez le numéro de page",
+            "extract": "Extraire et télécharger",
+            "extracting": "Extraction en cours...",
+            "extract_success": "Document extrait et téléchargé avec succès",
+            "delete": "Supprimer le PDF principal",
+            "delete_confirm": "Êtes-vous sûr de vouloir supprimer le PDF principal ?",
+            "total_pages": "Total des pages",
+            "uploaded_at": "Date de téléchargement",
+            "no_master_pdf": "Aucun PDF principal, veuillez d'abord télécharger un PDF",
+            "page_number_required": "Veuillez entrer un numéro de page",
+            "master_pdf_required": "Veuillez d'abord télécharger un PDF principal"
+        }
+    },
+    "quickCreate": {
+        "title": "Accès Rapide",
+        "subtitle": "Créer un document en un clic",
+        "workCertificate": "Attestation de Travail",
+        "salaryCert": "Attestation de Salaire",
+        "experienceCert": "Attestation d'Expérience",
+        "serviceCert": "Attestation de Service",
+        "clickToCreate": "Cliquer pour créer",
+        "creating": "Création en cours...",
+        "success": "{type} créée avec succès",
+        "error": "Échec de création de {type}",
+        "description": {
+            "workCertificate": "Document prouvant l'emploi du salarié",
+            "salaryCert": "Relevé de salaire mensuel",
+            "experienceCert": "Certificat d'expérience professionnelle",
+            "serviceCert": "Certificat de service"
+        }
+    }
+}
