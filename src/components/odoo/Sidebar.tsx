@@ -12,8 +12,6 @@ import {
     Heart,
     UserPlus,
     Settings,
-    Building2,
-    FileText,
 } from "lucide-react";
 import {
     Accordion,
@@ -30,7 +28,7 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
     const t = useTranslations("nav");
     const pathname = usePathname();
     const { fetchSettings, isModuleEnabled } = useSettingsStore();
-    const { hasPermission } = useAuthStore();
+    const { hasPermission, _hasHydrated } = useAuthStore();
 
     useEffect(() => {
         fetchSettings();
@@ -56,13 +54,13 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
                     titleKey: "wishes",
                     href: "/employees/wishes",
                     icon: Heart,
-                    visible: hasPermission("employees", "wishes.view") || hasPermission("employees", "view"),
+                    visible: hasPermission("employees", "wishes.view") || hasPermission("employees", "view") || hasPermission("employees", "edit") || hasPermission("employees", "wishes.master_pdf") || hasPermission("employees", "wishes.export"),
                 },
                 {
                     titleKey: "employee_requests",
                     href: "/employees/requests",
                     icon: UserPlus,
-                    visible: hasPermission("employees", "requests.view"),
+                    visible: hasPermission("employees", "requests.view") || hasPermission("employees", "requests.manage"),
                 },
             ]
         },
@@ -73,13 +71,13 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
             id: "grades",
             titleKey: "grades",
             icon: Medal,
-            visible: hasPermission("employees", "grades.view"),
+            visible: hasPermission("employees", "grades.view") || hasPermission("employees", "grades.manage"),
             items: [
                 {
                     titleKey: "grades",
                     href: "/employees/grades",
                     icon: Medal,
-                    visible: hasPermission("employees", "grades.view"),
+                    visible: hasPermission("employees", "grades.view") || hasPermission("employees", "grades.manage"),
                 },
                 {
                     titleKey: "positions",
@@ -103,6 +101,18 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
         },
     ];
 
+    // Filter Items — respect hydration state like frontend-v2
+    const filteredConfig = _hasHydrated ? navConfig.map(group => {
+        if (!group.visible) return null;
+
+        if (group.type === "group") {
+            const visibleItems = group.items?.filter(item => item.visible) || [];
+            if (visibleItems.length === 0) return null;
+            return { ...group, items: visibleItems };
+        }
+        return group;
+    }).filter(Boolean) : [];
+
     // Mapping for Labels (Fallback)
     const getLabel = (key: string) => {
         if (t?.has?.(key)) return t(key);
@@ -123,9 +133,7 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
             <div className="flex-1 overflow-y-auto py-4">
                 <nav className="grid gap-1 px-2">
                     <Accordion type="multiple" className="w-full">
-                        {navConfig.map((item: any, index) => {
-                            if (!item.visible) return null;
-
+                        {filteredConfig.map((item: any, index) => {
                             if (item.type === 'item') {
                                 const isActive = pathname.includes(item.href);
                                 return (
@@ -161,8 +169,7 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
                                         </AccordionTrigger>
                                         <AccordionContent className="pb-0" dir="rtl">
                                             <div className={cn("flex flex-col gap-1", !isCollapsed && "me-4 border-e border-border pe-2")}>
-                                                {item.items?.map((subItem: any, subIndex: number) => {
-                                                    if (!subItem.visible) return null;
+                                                {item.items.map((subItem: any, subIndex: number) => {
                                                     const isSubActive = pathname.includes(subItem.href);
                                                     return (
                                                         <Link

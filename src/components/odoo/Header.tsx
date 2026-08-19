@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import {
     Settings,
@@ -11,6 +11,7 @@ import {
 import { Link, useRouter, usePathname } from "@/i18n/routing";
 
 import { Button } from "@/components/ui/button";
+import { useSettingsStore } from "@/lib/stores/settings";
 import { useAuthStore } from "@/lib/stores/auth";
 import {
     DropdownMenu,
@@ -25,18 +26,26 @@ import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface HeaderProps {
+    // Props can be cleaned up if no longer used by layout
     onMenuClick?: () => void;
     isSidebarCollapsed?: boolean;
+    navigationMode?: 'classic' | 'grid' | 'dock' | 'minimal';
 }
 
-export function Header({ onMenuClick, isSidebarCollapsed }: HeaderProps) {
-    const t = useTranslations("common");
+export function Header({ onMenuClick, isSidebarCollapsed, navigationMode = 'classic' }: HeaderProps) {
+    const t = useTranslations("common"); // Fallback to common or specific namespace
     const tNav = useTranslations("nav");
+    const themeColor = useSettingsStore((state) => state.themeColor);
     const router = useRouter();
     const pathname = usePathname();
 
+    // No maintenance mode in employees app — simple header
+    const showMaintenanceBanner = false;
+
+    // Get real user from auth store
     const { user, logout } = useAuthStore();
 
+    // Build display name from user data
     const displayName = user ? `${user.firstname_ar || ''} ${user.lastname_ar || ''}`.trim() || user.email : 'مستخدم';
     const userInitials = user
         ? (user.firstname_ar?.[0] && user.lastname_ar?.[0]
@@ -46,11 +55,13 @@ export function Header({ onMenuClick, isSidebarCollapsed }: HeaderProps) {
 
     const handleLogout = async () => {
         try {
+            // Call backend to clear httpOnly cookie
             const { authApi } = await import("@/lib/api/auth");
             await authApi.logout();
         } catch (error) {
             console.error("Logout API error:", error);
         } finally {
+            // Always clear client state regardless of API result
             logout();
             router.push("/login");
         }
@@ -60,10 +71,11 @@ export function Header({ onMenuClick, isSidebarCollapsed }: HeaderProps) {
         <header className={cn(
             "h-[48px] w-full flex items-center px-2 justify-between z-50 sticky shadow-sm transition-colors duration-300",
             "bg-primary text-primary-foreground",
-            "top-0"
+            showMaintenanceBanner ? "top-[48px]" : "top-0"
         )}>
-            {/* Left Section: Menu & Brand */}
+            {/* Left Section: Apps Menu & Brand */}
             <div className="flex items-center gap-2">
+                {/* Menu Toggle Button */}
                 <Button
                     variant="ghost"
                     size="icon"
@@ -77,7 +89,16 @@ export function Header({ onMenuClick, isSidebarCollapsed }: HeaderProps) {
                     <div className="font-semibold text-base hidden md:block text-primary-foreground ms-2">
                         <div className="flex items-center gap-2">
                             <Users className="h-5 w-5" />
-                            <span>{tNav('employees')}</span>
+                            <span>{(() => {
+                                if (pathname.includes('/employees/wishes')) return tNav('wishes');
+                                if (pathname.includes('/employees/requests')) return tNav('employee_requests');
+                                if (pathname.includes('/employees/grades')) return tNav('grades');
+                                if (pathname.includes('/employees/positions')) return tNav('positions');
+                                if (pathname.includes('/employees/districts')) return tNav('districts');
+                                if (pathname.includes('/employees/offices')) return tNav('offices');
+                                if (pathname.includes('/employees')) return tNav('employees');
+                                return tNav('employees');
+                            })()}</span>
                         </div>
                     </div>
                 </Link>
