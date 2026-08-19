@@ -4,8 +4,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales, defaultLocale } from "@/i18n";
 import { Tajawal, Inter } from "next/font/google";
-import { ThemeProvider } from "next-themes";
-import { Toaster } from "@/components/ui/sonner";
+import Providers from "@/providers";
 
 import "../globals.css";
 
@@ -52,17 +51,11 @@ export default async function LocaleLayout({
     return (
         <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} suppressHydrationWarning>
             <body className={`${tajawal.variable} ${inter.variable} antialiased`}>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    enableSystem
-                    disableTransitionOnChange
-                >
+                <Providers>
                     <NextIntlClientProvider messages={messages}>
                         {children}
-                        <Toaster />
                     </NextIntlClientProvider>
-                </ThemeProvider>
+                </Providers>
             </body>
         </html>
     );
