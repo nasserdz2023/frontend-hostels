@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "next-themes";
 import { useState } from "react";
 import { Toaster } from "@/components/ui/sonner";
+import { AuthBootstrap } from "@/components/providers/AuthBootstrap";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
     const [queryClient] = useState(
@@ -26,7 +27,9 @@ export default function Providers({ children }: { children: React.ReactNode }) {
                 enableSystem
                 disableTransitionOnChange
             >
-                {children}
+                <AuthBootstrap>
+                    {children}
+                </AuthBootstrap>
                 <Toaster />
             </ThemeProvider>
         </QueryClientProvider>

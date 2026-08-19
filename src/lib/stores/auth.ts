@@ -56,6 +56,7 @@ interface AuthState {
     complete2FA: (user: User, accessToken: string, refreshToken?: string) => void;
     hasPermission: (module: string, action: string) => boolean;
     setHasHydrated: (state: boolean) => void;
+    initFromCookie: () => Promise<void>;
 }
 
 export const useAuthStore = create<AuthState>()(
@@ -140,6 +141,47 @@ export const useAuthStore = create<AuthState>()(
                     tempToken: null,
                     isLoading: false,
                 });
+            },
+
+            // Cookie-based auth bootstrap for cross-subdomain SSO
+            // localStorage is per-origin (djs68.com ≠ employees.djs68.com)
+            // but cookies with Domain=.djs68.com are shared across all subdomains.
+            initFromCookie: async () => {
+                // Already have user data - skip
+                if (get().user) return;
+
+                try {
+                    // Build API URL dynamically (same as client.ts logic)
+                    const protocol = window.location.protocol;
+                    const hostname = window.location.hostname;
+                    let apiBase = '';
+
+                    const PRODUCTION_DOMAINS = ['djs68.com', 'djs-bousaada.com'];
+                    const domainParts = hostname.replace('www.', '').split('.');
+                    const rootDomain = domainParts.length >= 2 ? domainParts.slice(-2).join('.') : hostname;
+
+                    if (PRODUCTION_DOMAINS.includes(rootDomain)) {
+                        apiBase = `${protocol}//api.${rootDomain}/api/v1`;
+                    } else {
+                        // localhost or other
+                        const port = '8000';
+                        apiBase = `${protocol}//${hostname}:${port}/api/v1`;
+                    }
+
+                    const res = await fetch(`${apiBase}/auth/me`, {
+                        method: 'GET',
+                        credentials: 'include',
+                        headers: { 'Accept': 'application/json' },
+                    });
+
+                    if (res.ok) {
+                        const user = await res.json();
+                        set({ user, isAuthenticated: true, isLoading: false });
+                    }
+                    // If 401 - just leave as not authenticated
+                } catch (err) {
+                    console.warn('[Auth] Cookie bootstrap failed:', err);
+                }
             },
 
             // Check permission
