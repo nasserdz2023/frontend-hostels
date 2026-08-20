@@ -30,7 +30,7 @@ import { useAuthStore } from "@/lib/stores/auth";
 
 import { PermissionGuard } from "@/hooks/useRequirePermission";
 
-const STORAGE_URL = process.env.NEXT_PUBLIC_STORAGE_URL || 'https://api.djs-bousaada.com/storage';
+const STORAGE_URL = process.env.NEXT_PUBLIC_STORAGE_URL || 'https://api.djs68.com/storage';
 
 const memberReceiptUrl = (member: { receipt_path?: string | null; screenshot_path?: string | null }) => {
   const p = member.receipt_path || member.screenshot_path;

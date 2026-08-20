@@ -23,7 +23,7 @@ import { formatAgePrecise } from "@/lib/camp-allocation-utils";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
 import { locationsApi } from "@/lib/api/locations";
 
-const STORAGE_URL = process.env.NEXT_PUBLIC_STORAGE_URL || 'https://api.djs-bousaada.com/storage';
+const STORAGE_URL = process.env.NEXT_PUBLIC_STORAGE_URL || 'https://api.djs68.com/storage';
 
 interface AddMembersModalProps {
   tripId: string;
