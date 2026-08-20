@@ -1228,7 +1228,7 @@ export default function BatchDetailPage() {
                 <div className="mt-3 flex items-center gap-1 text-xs text-blue-600">
                   <UserCheck className="w-3 h-3" />
                   <Link
-                    href={`/${locale}/members/${child.member_id}`}
+                    href={`/members/${child.member_id}`}
                     className="hover:underline"
                   >
                     {t('camp-registration.view_member')}
@@ -2215,7 +2215,7 @@ export default function BatchDetailPage() {
                     هذا الطفل مرتبط بمنخرط — التعديلات على الاسم وتاريخ الميلاد والجنس ستتم مزامنتها تلقائياً مع ملف المنخرط
                   </span>
                   <Link
-                    href={`/${locale}/members/${editingChild.member_id}`}
+                    href={`/members/${editingChild.member_id}`}
                     className="text-xs text-blue-600 dark:text-blue-400 hover:underline mr-auto whitespace-nowrap"
                   >
                     عرض المنخرط ←

@@ -312,7 +312,7 @@ export default function ChildDetailPage() {
                     {t('camp-registration.linked_member')}
                   </span>
                   <Link
-                    href={`/${params.locale}/members/${child.member_id}`}
+                    href={`/members/${child.member_id}`}
                     className="text-sm text-blue-600 dark:text-blue-400 hover:underline mr-auto"
                   >
                     {t('camp-registration.view_member')}
