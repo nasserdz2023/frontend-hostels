@@ -8,7 +8,10 @@ import {
     Tent,
     MapPin,
     CloudDownload,
+    Users,
     Settings,
+    IdCard,
+    Bot,
 } from "lucide-react";
 import {
     Accordion,
@@ -31,8 +34,24 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
         fetchSettings();
     }, []);
 
-    // Navigation config — only camp-related items
+    // Navigation config
     const navConfig = [
+        // Members Group
+        {
+            type: "group",
+            id: "members",
+            titleKey: "members",
+            icon: Users,
+            visible: isModuleEnabled("members"),
+            items: [
+                {
+                    titleKey: "members",
+                    href: "/members",
+                    icon: Users,
+                    visible: isModuleEnabled("members") && hasPermission("members", "view"),
+                },
+            ]
+        },
         // Camp Management Group
         {
             type: "group",
@@ -59,6 +78,24 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
                     icon: CloudDownload,
                     visible: isModuleEnabled("ministerial_sync") && hasPermission("ministerial_sync", "view"),
                 },
+                {
+                    titleKey: "members",
+                    href: "/members",
+                    icon: IdCard,
+                    visible: hasPermission("members", "view"),
+                },
+                {
+                    titleKey: "guardians",
+                    href: "/guardians",
+                    icon: Users,
+                    visible: hasPermission("guardians", "view"),
+                },
+                {
+                    titleKey: "youth_connect",
+                    href: "/youth-connect",
+                    icon: Bot,
+                    visible: hasPermission("youth_connect", "view"),
+                },
             ]
         },
     ];
@@ -80,9 +117,12 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
         if (t?.has?.(key)) return t(key);
         const labels: Record<string, string> = {
             camp_management: "إدارة المخيمات",
+            members: "المنخرطين",
             camp_registration: "التسجيل بالمخيم",
             camp_trips: "إدارة الأفواج",
             ministerial_sync: "المنصة الوزارية",
+            guardians: "الأوصياء",
+            youth_connect: "يوث كونكت",
         };
         return labels[key] || key.charAt(0).toUpperCase() + key.slice(1);
     };
