@@ -22,6 +22,8 @@ async function loadMessages(locale: Locale) {
         'settings',
         'notifications',
         'metadata',
+        'guardians',
+        'youth-connect',
     ];
 
     const messages: Record<string, unknown> = {};

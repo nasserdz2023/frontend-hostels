@@ -1,0 +1,17 @@
+{
+  "title": "تكامل منصة YouthConnect",
+  "description": "أتمتة ومتابعة تسجيل المنخرطين في البوابة الوطنية للوزارة",
+  "external_platform": "فتح المنصة الخارجية",
+  "create_batch": "إنشاء دفعة تسجيل",
+  "total_registered": "إجمالي المسجلين",
+  "successful_registrations": "عمليات ناجحة",
+  "processing": "قيد التنفيذ",
+  "failed_registrations": "فشل التسجيل",
+  "recent_batches": "الدفعات الأخيرة",
+  "search_placeholder": "بحث عن دفعة...",
+  "completed": "مكتمل",
+  "failed": "فاشل",
+  "live_logs": "سجل العمليات المباشر",
+  "tech_tip": "نصيحة تقنية",
+  "tech_tip_content": "تأكد من مطابقة أسماء المنخرطين في سجلاتك مع شهادات الميلاد الرسمية، حيث تقوم منصة الوزارة بالتحقق التلقائي من قاعدة بيانات الحالة المدنية."
+}
