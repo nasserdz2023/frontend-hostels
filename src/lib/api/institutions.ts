@@ -1,5 +1,12 @@
 import api, { PaginatedResponse, getApiBaseUrl } from './client';
-import { Employee } from './employees';
+// Minimal Employee type for institution room/field responsible references
+interface Employee {
+    id: string;
+    firstname_ar?: string;
+    lastname_ar?: string;
+    firstname_fr?: string;
+    lastname_fr?: string;
+}
 
 // Types
 export interface Wilaya {

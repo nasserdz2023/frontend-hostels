@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const t = await getTranslations({ locale, namespace: "common" });
 
     return {
-        title: "DJS - إدارة الموظفين",
-        description: t("description") || "نظام إدارة الموارد البشرية - مديرية الشباب والرياضة",
+        title: "DJS - إدارة المخيمات الشبابية",
+        description: t("description") || "نظام إدارة المخيمات الشبابية - مديرية الشباب والرياضة",
     };
 }
 

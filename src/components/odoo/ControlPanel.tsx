@@ -82,7 +82,7 @@ export function ControlPanel({
                         </div>
                     ) : (
                         <nav className="flex items-center text-sm font-medium text-muted-foreground overflow-hidden whitespace-nowrap">
-                            <Link href="/dashboard" className="hover:text-primary transition-colors">
+                            <Link href="/camp-registration" className="hover:text-primary transition-colors">
                                 {t("home")}
                             </Link>
                             {breadcrumbs.map((crumb, index) => (

@@ -5,12 +5,9 @@ import { usePathname } from "next/navigation";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import {
-    Users,
+    Tent,
     MapPin,
-    Medal,
-    Briefcase,
-    Heart,
-    UserPlus,
+    CloudDownload,
     Settings,
 } from "lucide-react";
 import {
@@ -34,74 +31,39 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
         fetchSettings();
     }, []);
 
-    // Navigation config — only employees-related items
+    // Navigation config — only camp-related items
     const navConfig = [
-        // Employees
+        // Camp Management Group
         {
             type: "group",
-            id: "employees",
-            titleKey: "employees",
-            icon: Users,
-            visible: isModuleEnabled("hr"),
+            id: "camp",
+            titleKey: "camp_management",
+            icon: Tent,
+            visible: isModuleEnabled("camp_registration") || isModuleEnabled("ministerial_sync"),
             items: [
                 {
-                    titleKey: "employees",
-                    href: "/employees",
-                    icon: Users,
-                    visible: hasPermission("employees", "view"),
+                    titleKey: "camp_registration",
+                    href: "/camp-registration",
+                    icon: Tent,
+                    visible: isModuleEnabled("camp_registration") && hasPermission("camp_registration", "view"),
                 },
                 {
-                    titleKey: "wishes",
-                    href: "/employees/wishes",
-                    icon: Heart,
-                    visible: hasPermission("employees", "wishes.view") || hasPermission("employees", "view") || hasPermission("employees", "edit") || hasPermission("employees", "wishes.master_pdf") || hasPermission("employees", "wishes.export"),
-                },
-                {
-                    titleKey: "employee_requests",
-                    href: "/employees/requests",
-                    icon: UserPlus,
-                    visible: hasPermission("employees", "requests.view") || hasPermission("employees", "requests.manage"),
-                },
-            ]
-        },
-
-        // Grades & Positions
-        {
-            type: "group",
-            id: "grades",
-            titleKey: "grades",
-            icon: Medal,
-            visible: hasPermission("employees", "grades.view") || hasPermission("employees", "grades.manage"),
-            items: [
-                {
-                    titleKey: "grades",
-                    href: "/employees/grades",
-                    icon: Medal,
-                    visible: hasPermission("employees", "grades.view") || hasPermission("employees", "grades.manage"),
-                },
-                {
-                    titleKey: "positions",
-                    href: "/employees/positions",
-                    icon: Briefcase,
-                    visible: hasPermission("employees", "positions.view"),
-                },
-                {
-                    titleKey: "districts",
-                    href: "/employees/districts",
+                    titleKey: "camp_trips",
+                    href: "/camp-trips",
                     icon: MapPin,
-                    visible: hasPermission("employees", "districts.view"),
+                    visible: isModuleEnabled("camp_trips") && hasPermission("camp_trips", "view"),
                 },
                 {
-                    titleKey: "offices",
-                    href: "/employees/offices",
-                    icon: Briefcase,
-                    visible: hasPermission("settings", "manage"),
+                    titleKey: "ministerial_sync",
+                    href: "/ministerial-sync",
+                    icon: CloudDownload,
+                    visible: isModuleEnabled("ministerial_sync") && hasPermission("ministerial_sync", "view"),
                 },
             ]
         },
     ];
 
-    // Filter Items — respect hydration state like frontend-v2
+    // Filter Items — respect hydration state
     const filteredConfig = _hasHydrated ? navConfig.map(group => {
         if (!group.visible) return null;
 
@@ -117,13 +79,10 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
     const getLabel = (key: string) => {
         if (t?.has?.(key)) return t(key);
         const labels: Record<string, string> = {
-            employees: "الموظفون",
-            wishes: "الرغبات",
-            employee_requests: "طلبات الموظفين",
-            grades: "الرتب والأجور",
-            positions: "المناصب",
-            districts: "الأقاليم",
-            offices: "المكاتب",
+            camp_management: "إدارة المخيمات",
+            camp_registration: "التسجيل بالمخيم",
+            camp_trips: "إدارة الأفواج",
+            ministerial_sync: "المنصة الوزارية",
         };
         return labels[key] || key.charAt(0).toUpperCase() + key.slice(1);
     };

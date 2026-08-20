@@ -1,0 +1,53 @@
+{
+  "title": "Gestion des Membres",
+  "newMember": "Nouveau Membre",
+  "editMember": "Modifier le Membre",
+  "memberInfo": "Informations du Membre",
+  "personalInfo": "Informations Personnelles",
+  "contactInfo": "Contact et Adresse",
+  "membershipInfo": "Informations d'Adhésion",
+  "guardianInfo": "Informations du Tuteur",
+  "firstName": "Prénom",
+  "lastName": "Nom",
+  "firstNameFr": "Prénom (Français)",
+  "lastNameFr": "Nom (Français)",
+  "username": "Nom d'utilisateur",
+  "email": "Email",
+  "password": "Mot de passe",
+  "accountInfo": "Compte Numérique",
+  "birthDate": "Date de Naissance",
+  "gender": "Sexe",
+  "nationalId": "NIN",
+  "ministryNumber": "Numéro Ministère",
+  "localNumber": "Numéro d'adhésion local",
+  "wilaya": "Wilaya",
+  "commune": "Commune",
+  "address": "Adresse détaillée",
+  "institution": "Institution",
+  "academicLevel": "Niveau académique",
+  "favoriteActivities": "Activités préférées",
+  "hasDisabilities": "Handicapé",
+  "membershipYear": "Année d'adhésion",
+  "status": "Statut d'adhésion",
+  "guardian": {
+    "title": "Informations du Tuteur",
+    "firstName": "Prénom du Tuteur",
+    "lastName": "Nom du Tuteur",
+    "nationalId": "NIN du Tuteur",
+    "phone": "Numéro de téléphone",
+    "relationship": "Relation",
+    "candidatePhone": "Téléphone du membre (Optionnel)"
+  },
+  "messages": {
+    "created": "Membre créé avec succès",
+    "updated": "Données mises à jour avec succès",
+    "error": "Erreur lors de l'enregistrement des données"
+  },
+  "steps": {
+    "personal": "Personnel",
+    "location": "Localisation",
+    "guardian": "Tuteur",
+    "account": "Compte Numérique",
+    "confirm": "Confirmer"
+  }
+}

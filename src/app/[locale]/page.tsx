@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function LocaleRootPage() {
-  redirect("/ar/employees");
+  redirect("/ar/camp-registration");
 }

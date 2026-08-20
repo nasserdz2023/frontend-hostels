@@ -1,0 +1,53 @@
+{
+  "title": "Members Management",
+  "newMember": "New Member",
+  "editMember": "Edit Member",
+  "memberInfo": "Member Information",
+  "personalInfo": "Personal Information",
+  "contactInfo": "Contact & Address Info",
+  "membershipInfo": "Membership Info",
+  "guardianInfo": "Guardian Information",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "firstNameFr": "First Name (French)",
+  "lastNameFr": "Last Name (French)",
+  "username": "Username",
+  "email": "Email",
+  "password": "Password",
+  "accountInfo": "Digital Account Info",
+  "birthDate": "Birth Date",
+  "gender": "Gender",
+  "nationalId": "National ID (NIN)",
+  "ministryNumber": "Ministry Number",
+  "localNumber": "Local Membership Number",
+  "wilaya": "Wilaya",
+  "commune": "Commune",
+  "address": "Detailed Address",
+  "institution": "Institution",
+  "academicLevel": "Academic Level",
+  "favoriteActivities": "Favorite Activities",
+  "hasDisabilities": "Has Disabilities",
+  "membershipYear": "Membership Year",
+  "status": "Membership Status",
+  "guardian": {
+    "title": "Guardian Information",
+    "firstName": "Guardian First Name",
+    "lastName": "Guardian Last Name",
+    "nationalId": "Guardian National ID",
+    "phone": "Phone Number",
+    "relationship": "Relationship",
+    "candidatePhone": "Member Phone (Optional)"
+  },
+  "messages": {
+    "created": "Member created successfully",
+    "updated": "Member updated successfully",
+    "error": "Error saving member data"
+  },
+  "steps": {
+    "personal": "Personal",
+    "location": "Location",
+    "guardian": "Guardian",
+    "account": "Digital Account",
+    "confirm": "Confirm"
+  }
+}

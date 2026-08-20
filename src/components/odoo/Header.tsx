@@ -6,7 +6,7 @@ import {
     Settings,
     Menu,
     LogOut,
-    Users,
+    Tent,
 } from "lucide-react";
 import { Link, useRouter, usePathname } from "@/i18n/routing";
 
@@ -39,7 +39,7 @@ export function Header({ onMenuClick, isSidebarCollapsed, navigationMode = 'clas
     const router = useRouter();
     const pathname = usePathname();
 
-    // No maintenance mode in employees app — simple header
+    // No maintenance mode — simple header
     const showMaintenanceBanner = false;
 
     // Get real user from auth store
@@ -85,19 +85,17 @@ export function Header({ onMenuClick, isSidebarCollapsed, navigationMode = 'clas
                     <Menu className="h-5 w-5" />
                 </Button>
 
-                <Link href="/employees" className="flex items-center">
+                <Link href="/camp-registration" className="flex items-center">
                     <div className="font-semibold text-base hidden md:block text-primary-foreground ms-2">
                         <div className="flex items-center gap-2">
-                            <Users className="h-5 w-5" />
+                            <Tent className="h-5 w-5" />
                             <span>{(() => {
-                                if (pathname.includes('/employees/wishes')) return tNav('wishes');
-                                if (pathname.includes('/employees/requests')) return tNav('employee_requests');
-                                if (pathname.includes('/employees/grades')) return tNav('grades');
-                                if (pathname.includes('/employees/positions')) return tNav('positions');
-                                if (pathname.includes('/employees/districts')) return tNav('districts');
-                                if (pathname.includes('/employees/offices')) return tNav('offices');
-                                if (pathname.includes('/employees')) return tNav('employees');
-                                return tNav('employees');
+                                if (pathname.includes('/camp-registration/create')) return tNav('camp_registration') + ' - إنشاء';
+                                if (pathname.includes('/camp-registration/allocation')) return 'توزيع)';
+                                if (pathname.includes('/camp-registration')) return tNav('camp_registration');
+                                if (pathname.includes('/camp-trips')) return tNav('camp_trips');
+                                if (pathname.includes('/ministerial-sync')) return tNav('ministerial_sync');
+                                return tNav('camp_management');
                             })()}</span>
                         </div>
                     </div>

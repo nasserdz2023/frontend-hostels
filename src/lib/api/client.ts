@@ -121,6 +121,15 @@ export function getApiBaseUrl(): string {
     return apiBaseUrl;
 }
 
+// --- Auth refresh loop prevention (module-level state) ---
+let isRefreshing = false;
+let failedQueue: Array<{ resolve: (value: unknown) => void; reject: (reason?: unknown) => void }> = [];
+
+function processQueue(error: unknown) {
+    failedQueue.forEach(({ reject }) => reject(error));
+    failedQueue = [];
+}
+
 // Create axios instance with dynamic baseURL
 const api: AxiosInstance = axios.create({
     headers: {
@@ -206,29 +215,40 @@ api.interceptors.response.use(
             console.groupEnd();
         }
 
-        // Handle 401 - Refresh Token Logic
-        if (error.response?.status === 401 && !originalRequest._retry && !originalRequest.url?.includes('/auth/login')) {
+        // Handle 401 - Refresh Token Logic (queue-based to prevent infinite loops)
+        const SKIP_REFRESH_URLS = ['/auth/login', '/auth/refresh', '/auth/register', '/auth/me'];
+        const shouldRetry = error.response?.status === 401
+            && !originalRequest._retry
+            && !SKIP_REFRESH_URLS.some(url => originalRequest.url?.includes(url));
+
+        if (shouldRetry) {
+            if (isRefreshing) {
+                return new Promise((resolve, reject) => {
+                    failedQueue.push({ resolve, reject });
+                }).then(() => api(originalRequest));
+            }
+
+            isRefreshing = true;
             originalRequest._retry = true;
 
             try {
-                // Attempt to refresh token (Cookie-based)
                 await api.post('/auth/refresh');
-
-                // Retry original request
+                processQueue(null);
                 return api(originalRequest);
             } catch (refreshError) {
-                // Validation failed -> Logout
+                processQueue(refreshError);
                 if (typeof window !== 'undefined') {
-                    // Only redirect if not already on login/register to avoid loops
-                    const isAuthPage = window.location.pathname.includes('/login') || window.location.pathname.includes('/register');
+                    const isAuthPage = window.location.pathname.includes('/login')
+                        || window.location.pathname.includes('/register');
                     if (!isAuthPage) {
-                        // Attempt to detect current locale from path
                         const pathSegments = window.location.pathname.split('/');
                         const currentLocale = pathSegments[1] || 'ar';
                         window.location.href = `/${currentLocale}/login`;
                     }
                 }
                 return Promise.reject(refreshError);
+            } finally {
+                isRefreshing = false;
             }
         }
 

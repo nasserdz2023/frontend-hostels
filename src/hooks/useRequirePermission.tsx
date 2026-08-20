@@ -84,8 +84,8 @@ export function AccessDenied({ module, action }: { module: string; action: strin
                 <Button variant="outline" onClick={() => router.back()}>
                     العودة للخلف
                 </Button>
-                <Button onClick={() => router.push('/dashboard')}>
-                    لوحة التحكم
+                <Button onClick={() => router.push('/camp-registration')}>
+                    إدارة المخيمات
                 </Button>
             </div>
         </div>

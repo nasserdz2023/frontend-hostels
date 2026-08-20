@@ -6,20 +6,22 @@ export const defaultLocale = 'ar' as const;
 
 export type Locale = (typeof locales)[number];
 
-// Only employee-related translation modules
+// Only camp-related translation modules
 async function loadMessages(locale: Locale) {
     const modules = [
         'common',
         'auth',
         'nav',
-        'employees',
+        'camp-registration',
+        'camp-trips',
+        'ministerial-sync',
         'institutions',
-        'documents',
+        'locations',
+        'associations',
+        'members',
         'settings',
-        'users',
         'notifications',
-        'skills',
-        'offices',
+        'metadata',
     ];
 
     const messages: Record<string, unknown> = {};
