@@ -85,5 +85,7 @@
         "ACTIVIST": "Activist",
         "PARENT": "Parent",
         "ASSOCIATION": "Association"
-    }
+    },
+    "camp_management": "Camp Management",
+    "guardians": "Guardians"
 }

@@ -93,5 +93,7 @@
         "ACTIVIST": "Activiste",
         "PARENT": "Parent",
         "ASSOCIATION": "Association"
-    }
+    },
+    "camp_management": "Gestion des camps",
+    "guardians": "Tuteurs"
 }
