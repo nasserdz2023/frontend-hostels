@@ -9,7 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
 import { SearchableSelect } from "@/components/ui/searchable-select";
 import { toast } from "sonner";
-import { useRouter, useSearchParams, useParams } from "next/navigation";
+import { useSearchParams, useParams } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import { Plus, Trash2, Save, Loader2, ArrowLeft, Upload, Download, ChevronDown, ChevronUp, ScanLine, X, Layers, Settings2, Mail, Info, Users } from "lucide-react";
 import {
   AlertDialog,
@@ -21,7 +22,7 @@ import {
   AlertDialogAction,
   AlertDialogCancel,
 } from "@/components/ui/alert-dialog";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Suspense } from "react";
 import { campRegistrationApi, CreateBatchRequest } from "@/lib/api/camp-registration";
 import { useAuthStore } from "@/lib/stores/auth";

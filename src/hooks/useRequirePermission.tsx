@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { notFound, useRouter } from "next/navigation";
+import { notFound } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import { useAuthStore } from "@/lib/stores/auth";
 import { ShieldX } from "lucide-react";
 import { Button } from "@/components/ui/button";

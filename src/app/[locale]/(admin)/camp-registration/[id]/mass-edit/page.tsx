@@ -11,7 +11,7 @@ import { SearchableSelect } from "@/components/ui/searchable-select";
 import { toast } from "sonner";
 import { useRouter, useParams } from "next/navigation";
 import { Plus, Trash2, Save, Loader2, ArrowLeft, Upload, Download, ChevronDown, ChevronUp, Users, Layers, Settings2, Mail, Info, X, Eye, AlertTriangle } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { campRegistrationApi, CreateBatchRequest } from "@/lib/api/camp-registration";
 import { locationsApi, Wilaya, Municipality } from "@/lib/api/locations";
 import { getApiBaseUrl, getErrorMessage } from "@/lib/api/client";

@@ -24,7 +24,7 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { OdooSearch } from "@/components/odoo";
 import { AddMembersModal } from "./AddMembersModal";
 import { formatAgePrecise } from "@/lib/camp-allocation-utils";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { toast } from "sonner";
 import { useAuthStore } from "@/lib/stores/auth";
 

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowLeft, User, Phone, MapPin, Loader2, CheckCircle, Clock, FileText, Image as ImageIcon, FolderOpen, Download, ShieldAlert as ShieldAlertIcon, UserCheck, UserPlus } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { campRegistrationApi, CampRegistration, RegistrationBatch } from "@/lib/api/camp-registration";
 import { SyncStatusBadge, type SyncStatus } from "@/components/shared/SyncStatusBadge";
 import { getApiBaseUrl } from "@/lib/api/client";

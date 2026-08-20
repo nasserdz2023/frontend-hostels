@@ -16,10 +16,10 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Brain, Wand2, Users, MapPin, CalendarDays, Clock, Play, RotateCcw, Save, CheckCircle2, AlertCircle, Loader2, BarChart3, Layers, Gauge, Sparkles, Scale } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowLeft } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import { toast } from "sonner";
 import { useTranslations, useLocale } from "next-intl";
 import { locationsApi } from "@/lib/api/locations";

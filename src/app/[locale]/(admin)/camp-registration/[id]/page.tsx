@@ -19,7 +19,7 @@ import {
   MapPin, Search, Folder, Info, Eye, ShieldAlert as ShieldAlertIcon, UserCheck,
   CloudDownload, Building2, Send
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { campRegistrationApi, RegistrationBatch, CampRegistration } from "@/lib/api/camp-registration";
 import { locationsApi, Wilaya, Municipality } from "@/lib/api/locations";
 import { SearchableSelect } from "@/components/ui/searchable-select";

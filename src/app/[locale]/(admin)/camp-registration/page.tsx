@@ -16,8 +16,8 @@ import {
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link } from "@/i18n/routing";
+import { useRouter } from "@/i18n/routing";
 import { campRegistrationApi, RegistrationBatch, BatchStatistics, CampRegistration } from "@/lib/api/camp-registration";
 import { ControlPanel } from "@/components/odoo/ControlPanel";
 import { cn } from "@/lib/utils";
