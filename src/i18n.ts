@@ -6,24 +6,21 @@ export const defaultLocale = 'ar' as const;
 
 export type Locale = (typeof locales)[number];
 
-// Only camp-related translation modules
+// Youth-related translation modules
 async function loadMessages(locale: Locale) {
     const modules = [
         'common',
         'auth',
         'nav',
-        'camp-registration',
-        'camp-trips',
-        'ministerial-sync',
+        'activities',
+        'talents',
+        'animator-registration',
+        'badges',
         'institutions',
         'locations',
-        'associations',
-        'members',
         'settings',
         'notifications',
         'metadata',
-        'guardians',
-        'youth-connect',
     ];
 
     const messages: Record<string, unknown> = {};

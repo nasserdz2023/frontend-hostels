@@ -95,5 +95,8 @@
         "ASSOCIATION": "Association"
     },
     "camp_management": "Gestion des camps",
-    "guardians": "Tuteurs"
+    "guardians": "Tuteurs",
+    "badges_management": "Gestion des badges",
+    "badge_generator": "Générateur de badges",
+    "issued_documents": "Documents émis"
 }

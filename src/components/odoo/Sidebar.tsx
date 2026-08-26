@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { Tent, MapPin, CloudDownload, Users, IdCard, Bot, Settings, type LucideIcon } from "lucide-react";
+import { Calendar, CalendarRange, ListTodo, CheckSquare, Medal, Trophy, Star, Users, Settings, type LucideIcon } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -46,65 +46,109 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
     const { hasPermission, _hasHydrated } = useAuthStore();
 
     const navConfig: NavConfigItem[] = [
-        // Members Group
+        // Activities Management Group
         {
             type: "group",
-            id: "members",
-            titleKey: "members",
-            icon: Users,
-            visible: isModuleEnabled("members"),
+            id: "activities",
+            titleKey: "activities_management",
+            icon: Calendar,
+            visible: isModuleEnabled("activities") && hasPermission("activities", "view"),
             items: [
                 {
-                    titleKey: "members",
-                    href: "/members",
-                    icon: Users,
-                    visible: isModuleEnabled("members") && hasPermission("members", "view"),
+                    titleKey: "activities",
+                    href: "/activities",
+                    icon: Calendar,
+                    visible: isModuleEnabled("activities") && hasPermission("activities", "view"),
+                },
+                {
+                    titleKey: "events",
+                    href: "/activities/events",
+                    icon: CalendarRange,
+                    visible: isModuleEnabled("activities") && hasPermission("activities", "view"),
+                },
+                {
+                    titleKey: "programs",
+                    href: "/activities/programs",
+                    icon: ListTodo,
+                    visible: isModuleEnabled("activities") && hasPermission("activities", "programs.view"),
+                },
+                {
+                    titleKey: "seasons",
+                    href: "/activities/seasons",
+                    icon: CalendarRange,
+                    visible: isModuleEnabled("activities") && hasPermission("activities", "seasons.view"),
+                },
+                {
+                    titleKey: "approvals",
+                    href: "/activities/approvals",
+                    icon: CheckSquare,
+                    visible: isModuleEnabled("activities") && (hasPermission("activities", "approve.department") || hasPermission("activities", "approve.final")),
+                },
+                {
+                    titleKey: "awards",
+                    href: "/activities/awards",
+                    icon: Medal,
+                    visible: isModuleEnabled("activities") && hasPermission("activities", "seasons.manage"),
                 },
             ]
         },
-        // Camp Management Group
+        // Talents & Innovation Group
         {
             type: "group",
-            id: "camp",
-            titleKey: "camp_management",
-            icon: Tent,
-            visible: isModuleEnabled("camp_registration") || isModuleEnabled("ministerial_sync"),
+            id: "talents",
+            titleKey: "talents_innovation",
+            icon: Trophy,
+            visible: isModuleEnabled("talents") && hasPermission("talents", "view"),
             items: [
                 {
-                    titleKey: "camp_registration",
-                    href: "/camp-registration",
-                    icon: Tent,
-                    visible: isModuleEnabled("camp_registration") && hasPermission("camp_registration", "view"),
-                },
-                {
-                    titleKey: "camp_trips",
-                    href: "/camp-trips",
-                    icon: MapPin,
-                    visible: isModuleEnabled("camp_trips") && hasPermission("camp_trips", "view"),
-                },
-                {
-                    titleKey: "ministerial_sync",
-                    href: "/ministerial-sync",
-                    icon: CloudDownload,
-                    visible: isModuleEnabled("ministerial_sync") && hasPermission("ministerial_sync", "view"),
-                },
-                {
-                    titleKey: "members",
-                    href: "/members",
-                    icon: IdCard,
-                    visible: hasPermission("members", "view"),
-                },
-                {
-                    titleKey: "guardians",
-                    href: "/guardians",
+                    titleKey: "talents_directory",
+                    href: "/talents",
                     icon: Users,
-                    visible: hasPermission("guardians", "view"),
+                    visible: hasPermission("talents", "view"),
                 },
                 {
-                    titleKey: "youth_connect",
-                    href: "/youth-connect",
-                    icon: Bot,
-                    visible: hasPermission("youth_connect", "view"),
+                    titleKey: "achievements",
+                    href: "/talents/achievements",
+                    icon: Star,
+                    visible: hasPermission("talents", "view"),
+                },
+            ]
+        },
+        // Animator Registration (Standalone)
+        {
+            type: "group",
+            id: "animator_registration",
+            titleKey: "animator_registration",
+            icon: Users,
+            visible: isModuleEnabled("animator_registration") && hasPermission("animator_registration", "view"),
+            items: [
+                {
+                    titleKey: "animator_registration",
+                    href: "/animator-registration",
+                    icon: Users,
+                    visible: isModuleEnabled("animator_registration") && hasPermission("animator_registration", "view"),
+                },
+            ]
+        },
+        // Badges Group
+        {
+            type: "group",
+            id: "badges",
+            titleKey: "badges_management",
+            icon: CheckSquare,
+            visible: isModuleEnabled("badges") || isModuleEnabled("media_office"),
+            items: [
+                {
+                    titleKey: "badge_generator",
+                    href: "/badges",
+                    icon: CheckSquare,
+                    visible: isModuleEnabled("badges") && hasPermission("badges", "view"),
+                },
+                {
+                    titleKey: "issued_documents",
+                    href: "/badges/issued",
+                    icon: ListTodo,
+                    visible: isModuleEnabled("badges") && hasPermission("badges", "view"),
                 },
             ]
         },

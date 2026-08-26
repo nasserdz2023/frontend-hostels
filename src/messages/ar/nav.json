@@ -87,5 +87,8 @@
     "career": "المسار الوظيفي",
     "file_cleanup": "تنظيف الملفات",
     "camp_management": "إدارة المخيمات",
-    "guardians": "الأوصياء"
+    "guardians": "الأوصياء",
+    "badges_management": "إدارة الشارات",
+    "badge_generator": "مولّد الشارات",
+    "issued_documents": "الوثائق الصادرة"
 }

@@ -6,7 +6,7 @@ import {
     Settings,
     Menu,
     LogOut,
-    Tent,
+    Calendar,
 } from "lucide-react";
 import { Link, useRouter, usePathname } from "@/i18n/routing";
 
@@ -85,17 +85,21 @@ export function Header({ onMenuClick, isSidebarCollapsed, navigationMode = 'clas
                     <Menu className="h-5 w-5" />
                 </Button>
 
-                <Link href="/camp-registration" className="flex items-center">
+                <Link href="/activities" className="flex items-center">
                     <div className="font-semibold text-base hidden md:block text-primary-foreground ms-2">
                         <div className="flex items-center gap-2">
-                            <Tent className="h-5 w-5" />
+                            <Calendar className="h-5 w-5" />
                             <span>{(() => {
-                                if (pathname.includes('/camp-registration/create')) return tNav('camp_registration') + ' - إنشاء';
-                                if (pathname.includes('/camp-registration/allocation')) return 'توزيع)';
-                                if (pathname.includes('/camp-registration')) return tNav('camp_registration');
-                                if (pathname.includes('/camp-trips')) return tNav('camp_trips');
-                                if (pathname.includes('/ministerial-sync')) return tNav('ministerial_sync');
-                                return tNav('camp_management');
+                                if (pathname.includes('/activities/events')) return tNav('events');
+                                if (pathname.includes('/activities/programs')) return tNav('programs');
+                                if (pathname.includes('/activities/seasons')) return tNav('seasons');
+                                if (pathname.includes('/activities/approvals')) return tNav('approvals');
+                                if (pathname.includes('/activities/awards')) return tNav('awards');
+                                if (pathname.includes('/activities')) return tNav('activities');
+                                if (pathname.includes('/talents')) return tNav('talents_innovation');
+                                if (pathname.includes('/animator-registration')) return tNav('animator_registration');
+                                if (pathname.includes('/badges')) return tNav('badges_management');
+                                return tNav('activities_management');
                             })()}</span>
                         </div>
                     </div>

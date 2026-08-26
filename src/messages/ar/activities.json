@@ -1,0 +1,354 @@
+{
+    "title": "الأنشطة",
+    "nav": {
+        "activities": "الأنشطة",
+        "calendar": "التقويم",
+        "seasons": "المواسم",
+        "programs": "البرامج"
+    },
+    "list": {
+        "title": "الأنشطة",
+        "subtitle": "إدارة الأنشطة الشبابية والرياضية",
+        "add": "إضافة نشاط",
+        "search": "بحث بالعنوان أو الرمز...",
+        "noActivities": "لا توجد أنشطة",
+        "addFirst": "ابدأ بإضافة نشاط جديد"
+    },
+    "form": {
+        "new": "إضافة نشاط جديد",
+        "edit": "تعديل النشاط",
+        "basicInfo": "المعلومات الأساسية",
+        "classification": "التصنيف والموقع",
+        "timing": "التوقيت",
+        "target_audience": "الفئة المستهدفة",
+        "target_categories": "الفئات المستهدفة",
+        "fees": "الرسوم والظهور",
+        "title_ar": "العنوان بالعربية",
+        "title_fr": "العنوان بالفرنسية",
+        "description": "الوصف",
+        "category": "الفئة",
+        "nature": "طابع النشاط",
+        "domain": "الميدان",
+        "activity_type": "نوع النشاط",
+        "institution": "المؤسسة",
+        "room": "القاعة/الملعب",
+        "location_type": "نوع المكان",
+        "location_details": "تفاصيل المكان / الغرفة",
+        "coordinator": "المنسق",
+        "season": "الموسم",
+        "program": "البرنامج",
+        "department": "القسم",
+        "start_date": "تاريخ البداية",
+        "end_date": "تاريخ النهاية",
+        "registration_start": "بداية التسجيل",
+        "registration_deadline": "آخر موعد للتسجيل",
+        "time_slot": "الفترة الزمنية",
+        "recurrence_type": "نوع التكرار",
+        "max_participants": "الحد الأقصى للمشاركين",
+        "min_age": "الحد الأدنى للعمر",
+        "max_age": "الحد الأقصى للعمر",
+        "target_gender": "الجنس المستهدف",
+        "is_free": "نشاط مجاني",
+        "fee_amount": "رسوم المشاركة",
+        "estimated_budget": "الميزانية الكلية التقديرية",
+        "is_public": "نشاط عام",
+        "is_featured": "نشاط مميز"
+    },
+    "seasons": {
+        "title": "المواسم النشطوية",
+        "add": "إضافة موسم",
+        "edit": "تعديل موسم",
+        "name": "اسم الموسم",
+        "start_date": "تاريخ البداية",
+        "end_date": "تاريخ النهاية",
+        "theme": "شعار الموسم",
+        "objectives": "الأهداف",
+        "status": "الحالة",
+        "noSeasons": "لا توجد مواسم",
+        "addFirst": "أضف موسمك الأول"
+    },
+    "programs": {
+        "title": "البرامج السنوية",
+        "add": "إضافة برنامج",
+        "edit": "تعديل برنامج",
+        "title_field": "عنوان البرنامج",
+        "target_activities": "عدد الأنشطة المستهدفة",
+        "noPrograms": "لا توجد برامج",
+        "addFirst": "أضف برنامجك الأول"
+    },
+    "messages": {
+        "created": "تم الإنشاء بنجاح",
+        "updated": "تم التحديث بنجاح",
+        "deleted": "تم الحذف بنجاح",
+        "error": "حدث خطأ غير متوقع",
+        "error_loading_data": "لم نتمكن من تحميل البيانات"
+    },
+    "type": {
+        "one_time": "مرة واحدة",
+        "recurring": "متكرر",
+        "seasonal": "موسمي"
+    },
+    "status": {
+        "draft": "مسودة",
+        "pending_approval": "بانتظار الموافقة",
+        "approved": "مقبول",
+        "rejected": "مرفوض",
+        "published": "منشور",
+        "ongoing": "قيد التنفيذ",
+        "completed": "مكتمل",
+        "cancelled": "ملغي",
+        "active": "نشط",
+        "closed": "مغلق",
+        "archived": "مؤرشف"
+    },
+    "gender": {
+        "all": "الكل",
+        "male": "ذكور فقط",
+        "female": "إناث فقط"
+    },
+    "sessions": {
+        "title": "الحصص",
+        "add": "إضافة حصة"
+    },
+    "statistics": {
+        "title": "الإحصائيات",
+        "total_registrations": "إجمالي التسجيلات",
+        "males": "ذكور",
+        "females": "إناث",
+        "average_age": "متوسط العمر",
+        "status_distribution": "حالة التسجيلات",
+        "gender_distribution": "توزيع الجنس",
+        "age_distribution": "توزيع الأعمار",
+        "monthly_registrations": "التسجيلات الشهرية",
+        "daily_registrations": "التسجيلات اليومية",
+        "no_data": "لا توجد إحصائيات متاحة",
+        "pending": "قيد الانتظار",
+        "approved": "مقبول",
+        "rejected": "مرفوض",
+        "cancelled": "ملغي",
+        "male": "ذكر",
+        "female": "أنثى",
+        "unknown_gender": "غير محدد",
+        "age_0_12": "0-12 سنة",
+        "age_13_17": "13-17 سنة",
+        "age_18_25": "18-25 سنة",
+        "age_26_35": "26-35 سنة",
+        "age_36_50": "36-50 سنة",
+        "age_51_plus": "51+ سنة"
+    },
+    "registrations": {
+        "title": "التسجيلات",
+        "total": "الإجمالي",
+        "pending": "قيد الانتظار",
+        "approved": "مقبول",
+        "rejected": "مرفوض",
+        "cancelled": "ملغي",
+        "all": "الكل",
+        "search": "بحث بالاسم، الهاتف، البريد...",
+        "no_results": "لا توجد نتائج للبحث",
+        "no_registrations": "لا توجد تسجيلات",
+        "no_results_hint": "حاول تغيير كلمات البحث أو تصفّح الأقسام الأخرى.",
+        "no_registrations_hint": "لم يسجل أي مشارك في هذا النشاط بعد. يمكنك مشاركة رابط التسجيل معهم.",
+        "additional_fields": "حقول إضافية",
+        "export_csv": "تصدير CSV",
+        "sync_google": "جلب الجديد من قوقل",
+        "sync_loading": "جاري مزامنة البيانات من قوقل شيتس...",
+        "sync_prompt": "أدخل رابط Google Apps Script (من نشر Web App):",
+        "sync_save_url": "حفظ الرابط",
+        "sync_save_error": "فشل في حفظ الرابط",
+        "sync_failed": "فشلت المزامنة",
+        "approve_success": "تمت الموافقة على التسجيل",
+        "approve_error": "فشل في قبول التسجيل",
+        "reject_success": "تم رفض التسجيل",
+        "reject_error": "فشل في رفض التسجيل",
+        "cancel_success": "تم إلغاء التسجيل",
+        "cancel_error": "فشل في إلغاء التسجيل",
+        "delete_success": "تم حذف التسجيل نهائياً",
+        "delete_error": "فشل في حذف التسجيل",
+        "confirm_delete": "هل أنت متأكد من حذف هذا التسجيل نهائياً؟ لا يمكن التراجع عن هذا الإجراء.",
+        "cancel_action": "إلغاء التسجيل",
+        "delete_action": "حذف نهائي",
+        "approve_action": "قبول",
+        "reject_action": "رفض",
+        "loading": "جاري تحميل التسجيلات..."
+    },
+    "registrants": "المسجلون",
+    "showing": "من",
+    "actions": {
+        "view": "عرض التفاصيل",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "cancel": "إلغاء",
+        "sessions": "الحصص",
+        "registrations": "التسجيلات",
+        "approve": "قبول",
+        "reject": "رفض",
+        "confirmDelete": "هل أنت متأكد؟"
+    },
+    "table": {
+        "code": "الرمز",
+        "title": "العنوان",
+        "title_ar": "العنوان (عربي)",
+        "title_fr": "العنوان (فرنسي)",
+        "category": "الفئة",
+        "institution": "المؤسسة",
+        "startDate": "تاريخ البداية",
+        "status": "الحالة",
+        "participants": "المشاركون",
+        "number": "#",
+        "participant": "المشارك",
+        "contact": "الاتصال",
+        "registration_date": "تاريخ التسجيل",
+        "payment": "الدفع"
+    },
+    "payment": {
+        "paid": "مدفوع",
+        "pending": "معلق",
+        "exempt": "معفى"
+    },
+    "csv": {
+        "header_name": "الاسم",
+        "header_lastname": "اللقب",
+        "header_birth_date": "تاريخ الميلاد",
+        "header_phone": "الهاتف",
+        "header_email": "البريد",
+        "header_address": "العنوان",
+        "header_registration_date": "تاريخ التسجيل",
+        "header_status": "الحالة",
+        "header_payment": "الدفع"
+    },
+    "settings": {
+        "title": "إعدادات الأنشطة",
+        "subtitle": "إدارة الميادين، الأنواع، والفئات المستهدفة",
+        "domains": "الميادين",
+        "types": "أنواع الأنشطة",
+        "targets": "الفئات المستهدفة",
+        "manage_desc": "إضافة أو تعديل البيانات"
+    },
+    "location_type": {
+        "INTERNAL": "داخلي",
+        "EXTERNAL": "خارجي",
+        "HYBRID": "معا"
+    },
+    "time_slot": {
+        "MORNING": "صباحا",
+        "EVENING": "مساء",
+        "NIGHT": "ليلا"
+    },
+    "nature": {
+        "PERMANENT": "دائم",
+        "TEMPORARY": "مؤقت"
+    },
+    "events": {
+        "title": "تقويم المناسبات",
+        "subtitle": "المناسبات الوطنية والدينية والدولية",
+        "add": "إضافة مناسبة",
+        "all": "الكل",
+        "allMonths": "كل الأشهر",
+            "event": "مناسبة",
+            "events": "مناسبات",
+        "filters": {
+            "type": "النوع",
+            "month": "الشهر"
+        },
+        "table": {
+            "event": "المناسبة",
+            "type": "النوع",
+            "date": "التاريخ",
+            "description": "الوصف",
+            "actions": ""
+        },
+        "empty": "لا توجد مناسبات مسجلة",
+        "loading": "جاري التحميل...",
+        "types": {
+            "NATIONAL": "وطنية",
+            "RELIGIOUS": "دينية",
+            "INTERNATIONAL": "دولية"
+        },
+        "months": ["جانفي", "فيفري", "مارس", "أفريل", "ماي", "جوان", "جويلية", "أوت", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
+        "form": {
+            "new": "إضافة مناسبة جديدة",
+            "edit": "تعديل مناسبة",
+            "labels": {
+                "name_ar": "الاسم بالعربية",
+                "name_fr": "الاسم بالفرنسية",
+                "type": "النوع",
+                "month": "الشهر",
+                "day": "اليوم",
+                "description": "الوصف",
+                "suggested_activities": "الأنشطة المقترحة"
+            },
+            "placeholders": {
+                "name_ar": "مثال: عيد الاستقلال",
+                "name_fr": "Fête de l'Indépendance",
+                "description": "وصف المناسبة...",
+                "suggested_activities": "كل نشاط في سطر..."
+            }
+        },
+        "delete": {
+            "title": "تأكيد الحذف",
+            "confirm": "هل أنت متأكد من رغبتك في حذف المناسبة \"{name}\"؟",
+            "cancel": "إلغاء",
+            "confirm_btn": "حذف"
+        },
+        "messages": {
+            "load_error": "فشل تحميل المناسبات",
+            "create_success": "تم إضافة المناسبة بنجاح",
+            "update_success": "تم تحديث المناسبة بنجاح",
+            "save_error": "فشل حفظ المناسبة",
+            "delete_success": "تم حذف المناسبة",
+            "delete_error": "فشل حذف المناسبة"
+        },
+        "validation": {
+            "name_required": "الاسم مطلوب",
+            "type_required": "النوع مطلوب",
+            "month_invalid": "الشهر غير صحيح",
+            "day_invalid": "اليوم غير صحيح"
+        },
+        "stats": {
+            "total": "المجموع",
+            "national": "وطنية",
+            "religious": "دينية",
+            "international": "دولية"
+        },
+        "confirmed": "معتمدة",
+        "countdown": {
+            "today": "اليوم!",
+            "past": "حدث",
+            "days": "بعد {days} يوماً"
+        }
+    },
+    "publicEvents": {
+        "title": "التقويم السنوي للمناسبات",
+        "subtitle": "اكتشف المناسبات الوطنية والدينية والدولية",
+        "filters": {
+            "month": "الشهر",
+            "allMonths": "كل الأشهر",
+            "event": "مناسبة",
+            "events": "مناسبات"
+        },
+        "months": ["جانفي", "فيفري", "مارس", "أفريل", "ماي", "جوان", "جويلية", "أوت", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
+        "stats": {
+            "total": "مجموع المناسبات",
+            "national": "وطنية",
+            "religious": "دينية",
+            "international": "دولية"
+        },
+        "types": {
+            "NATIONAL": "وطنية",
+            "RELIGIOUS": "دينية",
+            "INTERNATIONAL": "دولية"
+        },
+        "empty": {
+            "title": "لا توجد مناسبات",
+            "subtitle": "لم يتم تسجيل أي مناسبات لهذا الشهر"
+        },
+        "countdown": {
+            "today": "اليوم!",
+            "inDays": "بعد {days} أيام",
+            "past": "حدث"
+        },
+        "suggestedActivities": "الأنشطة المقترحة",
+        "eventOnDate": "مناسبة في هذا اليوم"
+    }
+}

@@ -87,5 +87,8 @@
         "ASSOCIATION": "Association"
     },
     "camp_management": "Camp Management",
-    "guardians": "Guardians"
+    "guardians": "Guardians",
+    "badges_management": "Badges Management",
+    "badge_generator": "Badge Generator",
+    "issued_documents": "Issued Documents"
 }

@@ -11,7 +11,7 @@ interface ModuleGuardProps {
     fallbackUrl?: string;
 }
 
-export default function ModuleGuard({ module, children, fallbackUrl = '/camp-registration' }: ModuleGuardProps) {
+export default function ModuleGuard({ module, children, fallbackUrl = '/activities' }: ModuleGuardProps) {
     const { isModuleEnabled, loading, fetchSettings } = useSettingsStore();
     const router = useRouter();
     const [isReady, setIsReady] = useState(false);

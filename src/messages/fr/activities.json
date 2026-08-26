@@ -1,0 +1,337 @@
+{
+    "title": "Activités",
+    "nav": {
+        "activities": "Activités",
+        "calendar": "Calendrier",
+        "seasons": "Saisons",
+        "programs": "Programmes"
+    },
+    "list": {
+        "title": "Activités",
+        "subtitle": "Gestion des activités de jeunesse et sportives",
+        "add": "Ajouter activité",
+        "search": "Rechercher par titre ou code...",
+        "noActivities": "Aucune activité",
+        "addFirst": "Commencez par ajouter une nouvelle activité"
+    },
+    "form": {
+        "new": "Nouvelle activité",
+        "edit": "Modifier l'activité",
+        "basicInfo": "Infos de base",
+        "classification": "Classification & Lieu",
+        "timing": "Timing",
+        "target_audience": "Public cible",
+        "fees": "Frais & Visibilité",
+        "title_ar": "Titre (Arabe)",
+        "title_fr": "Titre (Français)",
+        "description": "Description",
+        "category": "Catégorie",
+        "nature": "Nature de l'activité",
+        "domain": "Domaine",
+        "activity_type": "Type d'activité",
+        "institution": "Établissement",
+        "room": "Salle/Stade",
+        "location_details": "Détails du lieu / Salle",
+        "coordinator": "Coordinateur",
+        "season": "Saison",
+        "program": "Programme",
+        "department": "Département",
+        "start_date": "Date début",
+        "end_date": "Date fin",
+        "registration_start": "Début inscriptions",
+        "registration_deadline": "Fin inscriptions",
+        "recurrence_type": "Type de récurrence",
+        "max_participants": "Max participants",
+        "min_age": "Age min",
+        "max_age": "Age max",
+        "target_gender": "Genre cible",
+        "is_free": "Gratuit",
+        "fee_amount": "Frais",
+        "estimated_budget": "Budget estimatif",
+        "is_public": "Public",
+        "is_featured": "En vedette"
+    },
+    "seasons": {
+        "title": "Saisons d'activités",
+        "add": "Ajouter saison",
+        "edit": "Modifier saison",
+        "name": "Nom de la saison",
+        "start_date": "Date début",
+        "end_date": "Date fin",
+        "theme": "Thème",
+        "objectives": "Objectifs",
+        "status": "Statut",
+        "noSeasons": "Aucune saison",
+        "addFirst": "Ajoutez votre première saison"
+    },
+    "programs": {
+        "title": "Programmes annuels",
+        "add": "Ajouter programme",
+        "edit": "Modifier programme",
+        "title_field": "Titre du programme",
+        "target_activities": "Nombre d'activités cibles",
+        "noPrograms": "Aucun programme",
+        "addFirst": "Ajoutez votre premier programme"
+    },
+    "messages": {
+        "created": "Créé avec succès",
+        "updated": "Mis à jour avec succès",
+        "deleted": "Supprimé avec succès",
+        "error": "Une erreur inattendue s'est produite",
+        "error_loading_data": "Impossible de charger les données"
+    },
+    "type": {
+        "one_time": "Une fois",
+        "recurring": "Récurrent",
+        "seasonal": "Saisonnier"
+    },
+    "status": {
+        "draft": "Brouillon",
+        "pending_approval": "En attente",
+        "approved": "Approuvé",
+        "rejected": "Rejeté",
+        "published": "Publié",
+        "ongoing": "En cours",
+        "completed": "Terminé",
+        "cancelled": "Annulé",
+        "active": "Actif",
+        "closed": "Fermé",
+        "archived": "Archivé"
+    },
+    "gender": {
+        "all": "Tous",
+        "male": "Hommes",
+        "female": "Femmes"
+    },
+    "sessions": {
+        "title": "Séances",
+        "add": "Ajouter séance"
+    },
+    "statistics": {
+        "title": "Statistiques",
+        "total_registrations": "Total des inscriptions",
+        "males": "Hommes",
+        "females": "Femmes",
+        "average_age": "Âge moyen",
+        "status_distribution": "Statut des inscriptions",
+        "gender_distribution": "Répartition par genre",
+        "age_distribution": "Répartition par âge",
+        "monthly_registrations": "Inscriptions mensuelles",
+        "daily_registrations": "Inscriptions quotidiennes",
+        "no_data": "Aucune statistique disponible",
+        "pending": "En attente",
+        "approved": "Approuvé",
+        "rejected": "Rejeté",
+        "cancelled": "Annulé",
+        "male": "Homme",
+        "female": "Femme",
+        "unknown_gender": "Non spécifié",
+        "age_0_12": "0-12 ans",
+        "age_13_17": "13-17 ans",
+        "age_18_25": "18-25 ans",
+        "age_26_35": "26-35 ans",
+        "age_36_50": "36-50 ans",
+        "age_51_plus": "51+ ans"
+    },
+    "registrations": {
+        "title": "Inscriptions",
+        "total": "Total",
+        "pending": "En attente",
+        "approved": "Approuvé",
+        "rejected": "Rejeté",
+        "cancelled": "Annulé",
+        "all": "Tous",
+        "search": "Rechercher par nom, téléphone, email...",
+        "no_results": "Aucun résultat",
+        "no_registrations": "Aucune inscription",
+        "no_results_hint": "Essayez d'autres termes de recherche ou parcourez d'autres sections.",
+        "no_registrations_hint": "Aucun participant ne s'est encore inscrit. Partagez le lien d'inscription.",
+        "additional_fields": "Champs supplémentaires",
+        "export_csv": "Export CSV",
+        "sync_google": "Synchroniser depuis Google",
+        "sync_loading": "Synchronisation des données depuis Google Sheets...",
+        "sync_prompt": "Entrez l'URL Google Apps Script (depuis la publication Web App) :",
+        "sync_save_url": "Enregistrer l'URL",
+        "sync_save_error": "Échec de l'enregistrement de l'URL",
+        "sync_failed": "Échec de la synchronisation",
+        "approve_success": "Inscription approuvée",
+        "approve_error": "Échec de l'approbation",
+        "reject_success": "Inscription rejetée",
+        "reject_error": "Échec du rejet",
+        "cancel_success": "Inscription annulée",
+        "cancel_error": "Échec de l'annulation",
+        "delete_success": "Inscription supprimée définitivement",
+        "delete_error": "Échec de la suppression",
+        "confirm_delete": "Êtes-vous sûr de vouloir supprimer définitivement cette inscription ? Cette action est irréversible.",
+        "cancel_action": "Annuler l'inscription",
+        "delete_action": "Supprimer définitivement",
+        "approve_action": "Approuver",
+        "reject_action": "Rejeter",
+        "loading": "Chargement des inscriptions..."
+    },
+    "registrants": "Inscrits",
+    "showing": "sur",
+    "actions": {
+        "view": "Voir détails",
+        "edit": "Modifier",
+        "delete": "Supprimer",
+        "cancel": "Annuler",
+        "sessions": "Séances",
+        "registrations": "Inscriptions",
+        "approve": "Approuver",
+        "reject": "Rejeter",
+        "confirmDelete": "Êtes-vous sûr ?"
+    },
+    "table": {
+        "code": "Code",
+        "title": "Titre",
+        "title_ar": "Titre (Arabe)",
+        "title_fr": "Titre (Français)",
+        "category": "Catégorie",
+        "institution": "Établissement",
+        "startDate": "Date début",
+        "status": "Statut",
+        "participants": "Participants",
+        "number": "#",
+        "participant": "Participant",
+        "contact": "Contact",
+        "registration_date": "Date d'inscription",
+        "payment": "Paiement"
+    },
+    "payment": {
+        "paid": "Payé",
+        "pending": "En attente",
+        "exempt": "Exempté"
+    },
+    "csv": {
+        "header_name": "Prénom",
+        "header_lastname": "Nom",
+        "header_birth_date": "Date de naissance",
+        "header_phone": "Téléphone",
+        "header_email": "Email",
+        "header_address": "Adresse",
+        "header_registration_date": "Date d'inscription",
+        "header_status": "Statut",
+        "header_payment": "Paiement"
+    },
+    "settings": {
+        "title": "Paramètres des Activités",
+        "subtitle": "Gérer domaines, types et catégories cibles",
+        "domains": "Domaines",
+        "types": "Types d'activités",
+        "targets": "Catégories cibles",
+        "manage_desc": "Ajouter ou modifier des données"
+    },
+    "events": {
+        "title": "Calendrier des Événements",
+        "subtitle": "Événements nationaux, religieux et internationaux",
+        "add": "Ajouter un événement",
+        "all": "Tous",
+        "allMonths": "Tous les mois",
+            "event": "événement",
+            "events": "événements",
+        "filters": {
+            "type": "Type",
+            "month": "Mois"
+        },
+        "table": {
+            "event": "Événement",
+            "type": "Type",
+            "date": "Date",
+            "description": "Description",
+            "actions": ""
+        },
+        "empty": "Aucun événement enregistré",
+        "loading": "Chargement...",
+        "types": {
+            "NATIONAL": "National",
+            "RELIGIOUS": "Religieux",
+            "INTERNATIONAL": "International"
+        },
+        "months": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+        "form": {
+            "new": "Nouvel événement",
+            "edit": "Modifier l'événement",
+            "labels": {
+                "name_ar": "Nom (Arabe)",
+                "name_fr": "Nom (Français)",
+                "type": "Type",
+                "month": "Mois",
+                "day": "Jour",
+                "description": "Description",
+                "suggested_activities": "Activités suggérées"
+            },
+            "placeholders": {
+                "name_ar": "Ex: Fête de l'Indépendance",
+                "name_fr": "Ex: Fête de l'Indépendance",
+                "description": "Description de l'événement...",
+                "suggested_activities": "Une activité par ligne..."
+            }
+        },
+        "delete": {
+            "title": "Confirmer la suppression",
+            "confirm": "Êtes-vous sûr de vouloir supprimer \"{name}\" ?",
+            "cancel": "Annuler",
+            "confirm_btn": "Supprimer"
+        },
+        "messages": {
+            "load_error": "Échec du chargement des événements",
+            "create_success": "Événement créé avec succès",
+            "update_success": "Événement mis à jour avec succès",
+            "save_error": "Échec de l'enregistrement",
+            "delete_success": "Événement supprimé avec succès",
+            "delete_error": "Échec de la suppression"
+        },
+        "validation": {
+            "name_required": "Le nom est requis",
+            "type_required": "Le type est requis",
+            "month_invalid": "Mois invalide",
+            "day_invalid": "Jour invalide"
+        },
+        "stats": {
+            "total": "Total",
+            "national": "National",
+            "religious": "Religieux",
+            "international": "International"
+        },
+        "confirmed": "Confirmé",
+        "countdown": {
+            "today": "Aujourd'hui!",
+            "past": "Passé",
+            "days": "Dans {days} jours"
+        }
+    },
+    "publicEvents": {
+        "title": "Calendrier Annuel des Événements",
+        "subtitle": "Découvrez les événements nationaux, religieux et internationaux",
+        "filters": {
+            "month": "Mois",
+            "allMonths": "Tous les mois",
+            "event": "événement",
+            "events": "événements"
+        },
+        "months": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+        "stats": {
+            "total": "Total Événements",
+            "national": "National",
+            "religious": "Religieux",
+            "international": "International"
+        },
+        "types": {
+            "NATIONAL": "National",
+            "RELIGIOUS": "Religieux",
+            "INTERNATIONAL": "International"
+        },
+        "empty": {
+            "title": "Aucun Événement",
+            "subtitle": "Aucun événement enregistré pour ce mois"
+        },
+        "countdown": {
+            "today": "Aujourd'hui !",
+            "inDays": "Dans {days} jours",
+            "past": "Passé"
+        },
+        "suggestedActivities": "Activités suggérées",
+        "eventOnDate": "Événement ce jour"
+    }
+}
