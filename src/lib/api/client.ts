@@ -57,7 +57,7 @@ export function getApiBaseUrl(): string {
         // PRIORITY 2: Dynamic Auto-Configuration (Professional Fallback)
 
         const PRODUCTION_DOMAINS = ['djs68.com', 'djs-bousaada.com'];
-        const FALLBACK_API      = 'https://fedora.ddns.net/api/v1';
+        const FALLBACK_API      = 'https://api.djs68.com/api/v1';
 
         // True local dev (only pure localhost)
         const isDevLocalhost = currentHostname === 'localhost' ||
