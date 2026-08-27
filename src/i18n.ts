@@ -6,16 +6,13 @@ export const defaultLocale = 'ar' as const;
 
 export type Locale = (typeof locales)[number];
 
-// Youth-related translation modules
+// Hostels-related translation modules
 async function loadMessages(locale: Locale) {
     const modules = [
         'common',
         'auth',
         'nav',
-        'activities',
-        'talents',
-        'animator-registration',
-        'badges',
+        'hostels',
         'institutions',
         'locations',
         'settings',

@@ -1,10 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-import { Calendar, CalendarRange, ListTodo, CheckSquare, Medal, Trophy, Star, Users, Settings, type LucideIcon } from "lucide-react";
-import { useTranslations, useLocale } from "next-intl";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { Hotel, Bed, CalendarCheck, Users, Wrench, Settings, type LucideIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { usePathname, Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { useSettingsStore } from "@/lib/stores/settings";
 import { useAuthStore } from "@/lib/stores/auth";
@@ -40,115 +39,54 @@ type NavConfigItem = NavGroup;
 
 export function Sidebar({ className, isCollapsed, onItemClick }: { className?: string; isCollapsed?: boolean; onItemClick?: () => void }) {
     const t = useTranslations("nav");
-    const locale = useLocale();
     const pathname = usePathname();
     const { fetchSettings, isModuleEnabled } = useSettingsStore();
     const { hasPermission, _hasHydrated } = useAuthStore();
 
     const navConfig: NavConfigItem[] = [
-        // Activities Management Group
+        // Hostels Management Group
         {
             type: "group",
-            id: "activities",
-            titleKey: "activities_management",
-            icon: Calendar,
-            visible: isModuleEnabled("activities") && hasPermission("activities", "view"),
+            id: "hostels",
+            titleKey: "hostels_management",
+            icon: Hotel,
+            visible: isModuleEnabled("hostels") && hasPermission("hostels", "view"),
             items: [
                 {
-                    titleKey: "activities",
-                    href: "/activities",
-                    icon: Calendar,
-                    visible: isModuleEnabled("activities") && hasPermission("activities", "view"),
+                    titleKey: "hostels_list",
+                    href: "/admin-hostels",
+                    icon: Hotel,
+                    visible: isModuleEnabled("hostels") && hasPermission("hostels", "view"),
                 },
                 {
-                    titleKey: "events",
-                    href: "/activities/events",
-                    icon: CalendarRange,
-                    visible: isModuleEnabled("activities") && hasPermission("activities", "view"),
+                    titleKey: "hostels_create",
+                    href: "/admin-hostels/create",
+                    icon: Hotel,
+                    visible: isModuleEnabled("hostels") && hasPermission("hostels", "create"),
                 },
                 {
-                    titleKey: "programs",
-                    href: "/activities/programs",
-                    icon: ListTodo,
-                    visible: isModuleEnabled("activities") && hasPermission("activities", "programs.view"),
+                    titleKey: "rooms",
+                    href: "/admin-hostels/rooms",
+                    icon: Bed,
+                    visible: isModuleEnabled("hostels") && hasPermission("hostels", "view"),
                 },
                 {
-                    titleKey: "seasons",
-                    href: "/activities/seasons",
-                    icon: CalendarRange,
-                    visible: isModuleEnabled("activities") && hasPermission("activities", "seasons.view"),
+                    titleKey: "reservations",
+                    href: "/admin-hostels/reservations",
+                    icon: CalendarCheck,
+                    visible: isModuleEnabled("hostels") && hasPermission("hostels", "view"),
                 },
                 {
-                    titleKey: "approvals",
-                    href: "/activities/approvals",
-                    icon: CheckSquare,
-                    visible: isModuleEnabled("activities") && (hasPermission("activities", "approve.department") || hasPermission("activities", "approve.final")),
-                },
-                {
-                    titleKey: "awards",
-                    href: "/activities/awards",
-                    icon: Medal,
-                    visible: isModuleEnabled("activities") && hasPermission("activities", "seasons.manage"),
-                },
-            ]
-        },
-        // Talents & Innovation Group
-        {
-            type: "group",
-            id: "talents",
-            titleKey: "talents_innovation",
-            icon: Trophy,
-            visible: isModuleEnabled("talents") && hasPermission("talents", "view"),
-            items: [
-                {
-                    titleKey: "talents_directory",
-                    href: "/talents",
+                    titleKey: "guests",
+                    href: "/admin-hostels/guests",
                     icon: Users,
-                    visible: hasPermission("talents", "view"),
+                    visible: isModuleEnabled("hostels") && hasPermission("hostels", "view"),
                 },
                 {
-                    titleKey: "achievements",
-                    href: "/talents/achievements",
-                    icon: Star,
-                    visible: hasPermission("talents", "view"),
-                },
-            ]
-        },
-        // Animator Registration (Standalone)
-        {
-            type: "group",
-            id: "animator_registration",
-            titleKey: "animator_registration",
-            icon: Users,
-            visible: isModuleEnabled("animator_registration") && hasPermission("animator_registration", "view"),
-            items: [
-                {
-                    titleKey: "animator_registration",
-                    href: "/animator-registration",
-                    icon: Users,
-                    visible: isModuleEnabled("animator_registration") && hasPermission("animator_registration", "view"),
-                },
-            ]
-        },
-        // Badges Group
-        {
-            type: "group",
-            id: "badges",
-            titleKey: "badges_management",
-            icon: CheckSquare,
-            visible: isModuleEnabled("badges") || isModuleEnabled("media_office"),
-            items: [
-                {
-                    titleKey: "badge_generator",
-                    href: "/badges",
-                    icon: CheckSquare,
-                    visible: isModuleEnabled("badges") && hasPermission("badges", "view"),
-                },
-                {
-                    titleKey: "issued_documents",
-                    href: "/badges/issued",
-                    icon: ListTodo,
-                    visible: isModuleEnabled("badges") && hasPermission("badges", "view"),
+                    titleKey: "maintenance",
+                    href: "/admin-hostels/maintenance",
+                    icon: Wrench,
+                    visible: isModuleEnabled("hostels") && hasPermission("hostels", "view"),
                 },
             ]
         },
@@ -202,7 +140,7 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
                                             return (
                                                 <Link
                                                     key={subItem.href}
-                                                    href={`/${locale}${subItem.href}`}
+                                                    href={subItem.href}
                                                     onClick={onItemClick}
                                                     className={cn(
                                                         "relative flex items-center gap-3 rounded-md py-2 px-3 text-sm transition-colors overflow-hidden whitespace-nowrap",
@@ -237,16 +175,16 @@ export function Sidebar({ className, isCollapsed, onItemClick }: { className?: s
             {/* Bottom Section (Settings) */}
             <div className="mt-auto p-2 border-t border-border/50">
                 <Link
-                    href={`/${locale}/settings`}
+                    href="/settings"
                     onClick={onItemClick}
                     className={cn(
                         "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:bg-accent hover:text-accent-foreground overflow-hidden whitespace-nowrap",
                         isCollapsed && "justify-center px-0"
                     )}
-                    title={isCollapsed ? "Settings" : undefined}
+                    title={isCollapsed ? "الإعدادات" : undefined}
                 >
                     <Settings className="h-5 w-5 shrink-0 text-muted-foreground" />
-                    {!isCollapsed && <span>{t.has('settings') ? t('settings') : 'Settings'}</span>}
+                    {!isCollapsed && <span>{t.has('settings') ? t('settings') : 'الإعدادات'}</span>}
                 </Link>
             </div>
         </div>
