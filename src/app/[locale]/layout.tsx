@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { locales, defaultLocale } from "@/i18n";
 import { Tajawal, Inter } from "next/font/google";
 import Providers from "@/providers";
+import { DirectionProvider } from "@/components/providers/DirectionProvider";
 import { ConnectionStatusBanner } from "@/components/layout/ConnectionStatusBanner";
 
 import "../globals.css";
@@ -54,8 +55,10 @@ export default async function LocaleLayout({
             <body className={`${tajawal.variable} ${inter.variable} antialiased`}>
                 <Providers>
                     <NextIntlClientProvider messages={messages}>
-                        {children}
-                        <ConnectionStatusBanner />
+                        <DirectionProvider dir={locale === "ar" ? "rtl" : "ltr"}>
+                            {children}
+                            <ConnectionStatusBanner />
+                        </DirectionProvider>
                     </NextIntlClientProvider>
                 </Providers>
             </body>
