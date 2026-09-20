@@ -86,5 +86,10 @@
         },
         "submitted": "Demande soumise"
     },
-    "unknown": "Inconnu"
+    "unknown": "Inconnu",
+    "connection": {
+        "title": "Connexion au serveur perdue",
+        "message": "La connexion au serveur a été perdue. Vérifiez votre connexion Internet.",
+        "retry": "Réessayer"
+    }
 }

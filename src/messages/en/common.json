@@ -61,5 +61,10 @@
     "published": "Published",
     "review": "Review",
     "draft": "Draft",
-    "unknown": "Unknown"
+    "unknown": "Unknown",
+    "connection": {
+        "title": "Connection to server lost",
+        "message": "Connection to the server was lost. Check your internet connection.",
+        "retry": "Retry"
+    }
 }

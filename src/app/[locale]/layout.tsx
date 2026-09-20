@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { locales, defaultLocale } from "@/i18n";
 import { Tajawal, Inter } from "next/font/google";
 import Providers from "@/providers";
+import { ConnectionStatusBanner } from "@/components/layout/ConnectionStatusBanner";
 
 import "../globals.css";
 
@@ -54,6 +55,7 @@ export default async function LocaleLayout({
                 <Providers>
                     <NextIntlClientProvider messages={messages}>
                         {children}
+                        <ConnectionStatusBanner />
                     </NextIntlClientProvider>
                 </Providers>
             </body>
